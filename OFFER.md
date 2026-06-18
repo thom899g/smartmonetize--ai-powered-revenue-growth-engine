@@ -60,6 +60,7 @@ This repository does not collect payment automatically. A paid pilot only happen
 
 ## Inspect Before Requesting
 
+- [5-minute self-service triage](QUICKSTART_TRIAGE.md)
 - [Sample report](SAMPLE_REPORT.md)
 - [Audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml)
 

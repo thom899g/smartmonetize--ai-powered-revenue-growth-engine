@@ -25,12 +25,17 @@ def test_sample_report_shows_deliverable_and_boundaries():
     readme = Path("README.md").read_text(encoding="utf-8")
     pyproject = Path("pyproject.toml").read_text(encoding="utf-8")
     release_notes = Path("RELEASE_NOTES.md").read_text(encoding="utf-8")
+    quickstart = Path("QUICKSTART_TRIAGE.md").read_text(encoding="utf-8")
 
     assert "SmartMonetize Sample Audit" in sample
     assert "Ranked Moves" in sample
     assert "7-Day Market Test" in sample
     assert "does not send messages" in sample
     assert "SAMPLE_REPORT.md" in readme
+    assert "QUICKSTART_TRIAGE.md" in readme
     assert "SampleReport" in pyproject
     assert "AuditRequest" in pyproject
     assert "Audit request issue form" in release_notes
+    assert "Revenue Triage Audit Request" in quickstart
+    assert "Do not include passwords" in quickstart
+    assert "a star" in quickstart
