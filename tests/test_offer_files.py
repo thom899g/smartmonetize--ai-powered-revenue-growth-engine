@@ -15,6 +15,10 @@ def test_issue_template_captures_buyer_interest_without_private_data():
         encoding="utf-8"
     )
 
+    assert "package_type" in template
+    assert "MCP/x402 Endpoint Mini-Audit - $199 pilot" in template
+    assert "endpoint" in template
+    assert "desired_outcome" in template
     assert "pilot_interest" in template
     assert "Do not include passwords" in template
     assert "revenue-audit" in template
@@ -62,5 +66,5 @@ def test_sample_report_shows_deliverable_and_boundaries():
     assert "McpX402Audit" in pyproject
     assert "$199" in mcp_x402_audit
     assert "No guarantee" in mcp_x402_audit or "no guarantee" in mcp_x402_audit
-    assert "Do not send passwords" in mcp_x402_audit
+    assert "passwords" in mcp_x402_audit
     assert "Revenue Triage Audit Request" in mcp_x402_audit

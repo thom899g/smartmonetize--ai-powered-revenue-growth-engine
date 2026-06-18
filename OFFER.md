@@ -74,4 +74,4 @@ It focuses on public discovery, payment metadata, directory readiness, and buyer
 - [MCP/x402 Endpoint Mini-Audit](MCP_X402_ENDPOINT_AUDIT.md)
 - [Audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml)
 
-The fastest valid signal is not a star. It is an issue or message from someone with a real product, public/anonymized metrics, and interest in the `$49` pilot.
+The fastest valid signal is not a star. It is an issue or message from someone with a real product, public/anonymized metrics, and interest in the `$49` triage pilot or `$199` MCP/x402 endpoint mini-audit.

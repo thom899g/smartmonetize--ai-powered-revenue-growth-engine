@@ -1,5 +1,5 @@
 name: Revenue Triage Audit Request
-description: Request a SmartMonetize revenue triage audit for a product with attention but weak conversion.
+description: Request a SmartMonetize triage audit or MCP/x402 endpoint mini-audit.
 title: "[Audit Request]: "
 labels: ["revenue-audit", "pilot-interest"]
 body:
@@ -7,6 +7,17 @@ body:
     attributes:
       value: |
         Thanks for testing SmartMonetize. Do not include passwords, API keys, payment details, private customer data, or confidential business data.
+  - type: dropdown
+    id: package_type
+    attributes:
+      label: Which package fits?
+      description: Choose the public/non-sensitive audit path that matches your product.
+      options:
+        - "MCP/x402 Endpoint Mini-Audit - $199 pilot"
+        - "Revenue Triage Audit - $49 pilot"
+        - "Not sure, show me the free triage first"
+    validations:
+      required: true
   - type: input
     id: product
     attributes:
@@ -23,14 +34,30 @@ body:
       placeholder: https://example.com
     validations:
       required: false
+  - type: input
+    id: endpoint
+    attributes:
+      label: MCP/x402 endpoint or manifest URL
+      description: Optional for generic revenue triage; useful for the MCP/x402 mini-audit.
+      placeholder: https://example.com/.well-known/x402.json
+    validations:
+      required: false
   - type: textarea
     id: signal
     attributes:
       label: Current market signal
       description: What attention exists already?
-      placeholder: "Example: 1,200 monthly visitors, 45 qualified clicks, 7 signups, 0 paid customers."
+      placeholder: "Example: directory crawler hit, public repo star, search impression, demo click, 7 signups, 0 paid calls."
     validations:
       required: true
+  - type: textarea
+    id: desired_outcome
+    attributes:
+      label: Desired outcome
+      description: What would make the audit useful?
+      placeholder: "Accepted listing, paid call, buyer-safe readiness proof, owner inquiry, or a sharper paid offer."
+    validations:
+      required: false
   - type: textarea
     id: constraints
     attributes:
@@ -42,9 +69,10 @@ body:
   - type: dropdown
     id: pilot_interest
     attributes:
-      label: Are you interested in the $49 pilot audit?
+      label: Are you interested in a paid pilot if the fit is clear?
       options:
-        - "Yes, if the fit is clear"
+        - "Yes, if the $199 MCP/x402 fit is clear"
+        - "Yes, if the $49 revenue triage fit is clear"
         - "Maybe, show me the free triage first"
         - "No, open-source feedback only"
     validations:
