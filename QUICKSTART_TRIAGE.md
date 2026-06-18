@@ -44,7 +44,7 @@ The useful output is not a long report. It is the first concrete move:
 - `revise`: sharpen offer, CTA, proof, or target
 - `scale`: there is enough signal to push the next approved test
 
-## 4. Compare Against The Sample
+## 4. Compare Against The Samples
 
 Read [`SAMPLE_REPORT.md`](SAMPLE_REPORT.md) before requesting help. A good request has:
 
@@ -53,6 +53,8 @@ Read [`SAMPLE_REPORT.md`](SAMPLE_REPORT.md) before requesting help. A good reque
 - one conversion problem
 - a clear owner-time limit
 - no private data
+
+For a real public-product pattern, read [`CASE_STUDY.md`](CASE_STUDY.md). It shows a product with directory/crawler evidence, working payment-aware surfaces, and still no verified customer revenue.
 
 ## 5. Request A Pilot Audit
 
@@ -80,4 +82,3 @@ Not enough by itself:
 - a local report
 - a dashboard
 - a vague "looks promising"
-

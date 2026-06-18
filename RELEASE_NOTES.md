@@ -9,6 +9,7 @@ First runnable SmartMonetize release.
 - Example metrics file
 - JSON and Markdown report output
 - Sample revenue triage audit deliverable
+- Public Ontario Protocol case study for products with discovery evidence but no buyer revenue
 - 5-minute self-service triage path for starred or curious visitors
 - `$49` pilot audit offer and GitHub audit-request issue template
 

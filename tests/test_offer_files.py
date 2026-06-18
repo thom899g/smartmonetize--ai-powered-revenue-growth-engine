@@ -23,9 +23,14 @@ def test_issue_template_captures_buyer_interest_without_private_data():
 def test_sample_report_shows_deliverable_and_boundaries():
     sample = Path("SAMPLE_REPORT.md").read_text(encoding="utf-8")
     readme = Path("README.md").read_text(encoding="utf-8")
+    offer = Path("OFFER.md").read_text(encoding="utf-8")
     pyproject = Path("pyproject.toml").read_text(encoding="utf-8")
     release_notes = Path("RELEASE_NOTES.md").read_text(encoding="utf-8")
     quickstart = Path("QUICKSTART_TRIAGE.md").read_text(encoding="utf-8")
+    case_study = Path("CASE_STUDY.md").read_text(encoding="utf-8")
+    ontario_metrics = Path("examples/ontario_protocol_metrics.json").read_text(
+        encoding="utf-8"
+    )
 
     assert "SmartMonetize Sample Audit" in sample
     assert "Ranked Moves" in sample
@@ -36,6 +41,14 @@ def test_sample_report_shows_deliverable_and_boundaries():
     assert "SampleReport" in pyproject
     assert "AuditRequest" in pyproject
     assert "Audit request issue form" in release_notes
+    assert "Ontario Protocol case study" in release_notes
     assert "Revenue Triage Audit Request" in quickstart
     assert "Do not include passwords" in quickstart
     assert "a star" in quickstart
+    assert "CASE_STUDY.md" in readme
+    assert "CASE_STUDY.md" in offer
+    assert "CASE_STUDY.md" in quickstart
+    assert "Ontario Protocol" in case_study
+    assert "self-funded test payment" in case_study
+    assert "Revenue Triage Audit Request" in case_study
+    assert "Ontario Protocol" in ontario_metrics
