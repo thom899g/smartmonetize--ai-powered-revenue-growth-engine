@@ -7,6 +7,7 @@ def test_offer_has_price_and_boundary():
     assert "$49" in offer
     assert "does not collect payment automatically" in offer
     assert "passwords" in offer
+    assert "Sample report" in offer
 
 
 def test_issue_template_captures_buyer_interest_without_private_data():
@@ -17,3 +18,14 @@ def test_issue_template_captures_buyer_interest_without_private_data():
     assert "pilot_interest" in template
     assert "Do not include passwords" in template
     assert "revenue-audit" in template
+
+
+def test_sample_report_shows_deliverable_and_boundaries():
+    sample = Path("SAMPLE_REPORT.md").read_text(encoding="utf-8")
+    readme = Path("README.md").read_text(encoding="utf-8")
+
+    assert "SmartMonetize Sample Audit" in sample
+    assert "Ranked Moves" in sample
+    assert "7-Day Market Test" in sample
+    assert "does not send messages" in sample
+    assert "SAMPLE_REPORT.md" in readme

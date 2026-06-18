@@ -57,3 +57,10 @@ Use public or anonymized numbers:
 Open a GitHub issue using the `Revenue Triage Audit Request` template.
 
 This repository does not collect payment automatically. A paid pilot only happens after a real request and an explicitly agreed payment path.
+
+## Inspect Before Requesting
+
+- [Sample report](SAMPLE_REPORT.md)
+- [Audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml)
+
+The fastest valid signal is not a star. It is an issue or message from someone with a real product, public/anonymized metrics, and interest in the `$49` pilot.

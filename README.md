@@ -91,6 +91,17 @@ The pilot is best for founders with some attention but no revenue yet. No privat
 
 To signal interest, open an issue using the `Revenue Triage Audit Request` template. Do not include passwords, private customer data, payment details, or confidential business data.
 
+Before opening an issue, inspect the sample deliverable:
+
+- [Sample SmartMonetize revenue triage report](SAMPLE_REPORT.md)
+- [Pilot offer and scope](OFFER.md)
+- [Audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml)
+
+Fast fit check:
+
+- Good fit: you have traffic, stars, clicks, signups, demo usage, or search impressions, but no clear paid conversion.
+- Bad fit: you need private data analysis, legal advice, guaranteed revenue, ads management, or automated outreach.
+
 ## Example Revenue Moves
 
 - Add a direct paid pilot CTA.
