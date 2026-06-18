@@ -23,9 +23,14 @@ def test_issue_template_captures_buyer_interest_without_private_data():
 def test_sample_report_shows_deliverable_and_boundaries():
     sample = Path("SAMPLE_REPORT.md").read_text(encoding="utf-8")
     readme = Path("README.md").read_text(encoding="utf-8")
+    pyproject = Path("pyproject.toml").read_text(encoding="utf-8")
+    release_notes = Path("RELEASE_NOTES.md").read_text(encoding="utf-8")
 
     assert "SmartMonetize Sample Audit" in sample
     assert "Ranked Moves" in sample
     assert "7-Day Market Test" in sample
     assert "does not send messages" in sample
     assert "SAMPLE_REPORT.md" in readme
+    assert "SampleReport" in pyproject
+    assert "AuditRequest" in pyproject
+    assert "Audit request issue form" in release_notes

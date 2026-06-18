@@ -31,6 +31,8 @@ dependencies = []
 [project.urls]
 Homepage = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine"
 Offer = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/blob/main/OFFER.md"
+SampleReport = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/blob/main/SAMPLE_REPORT.md"
+AuditRequest = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml"
 
 [project.scripts]
 smartmonetize = "smartmonetize.cli:main"
