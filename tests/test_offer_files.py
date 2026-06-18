@@ -45,6 +45,9 @@ def test_sample_report_shows_deliverable_and_boundaries():
     assert "does not send messages" in sample
     assert "SAMPLE_REPORT.md" in readme
     assert "QUICKSTART_TRIAGE.md" in readme
+    assert "Found This From `x402-service`, `mcp-server`, Or `agent-commerce`?" in readme
+    assert "Revenue Triage Audit Request" in readme
+    assert "Do not include passwords" in readme
     assert "SampleReport" in pyproject
     assert "AuditRequest" in pyproject
     assert "Audit request issue form" in release_notes

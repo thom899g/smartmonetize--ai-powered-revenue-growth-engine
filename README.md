@@ -4,6 +4,16 @@ Revenue triage for small web products.
 
 SmartMonetize is a lightweight audit tool that turns a few product metrics into a ranked monetization plan. It is intentionally deterministic: no fake "autonomous revenue" claims, no hidden scraping, no account creation, no spam, and no payment changes. It helps a founder decide the next revenue move from evidence.
 
+## Found This From `x402-service`, `mcp-server`, Or `agent-commerce`?
+
+If you run a paid API, MCP server, x402 endpoint, or agent-callable tool that has attention but no paid usage, start here:
+
+- [MCP/x402 Endpoint Mini-Audit package](MCP_X402_ENDPOINT_AUDIT.md) - `$199` pilot for one public endpoint.
+- [Revenue Triage Audit Request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml) - open an issue with public/non-sensitive details.
+- [Ontario Protocol case study](CASE_STUDY.md) - live example with crawler/developer attention, payment-aware surfaces, and no counted customer revenue yet.
+
+Good fit: public endpoint, manifest, repo, or landing page with stars, crawler hits, search impressions, demo usage, or directory attention but no clear buyer action. Do not include passwords, API keys, private customer data, payment details, or confidential business data.
+
 ## What It Does
 
 - Scores revenue opportunities by expected value, speed, repeatability, owner time, risk, and implementation cost.
