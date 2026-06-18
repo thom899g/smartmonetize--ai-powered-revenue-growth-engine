@@ -1,0 +1,12 @@
+{
+  "product": "Example SaaS",
+  "monthly_visitors": 1200,
+  "qualified_clicks": 45,
+  "signups": 7,
+  "paid_customers": 0,
+  "average_price_usd": 49,
+  "has_clear_offer": false,
+  "has_checkout": false,
+  "has_analytics": true,
+  "owner_minutes_available": 30
+}

@@ -1,66 +1,90 @@
-import logging
-from typing import Dict, Optional
-import requests
-from bs4 import BeautifulSoup
+"""Input loading and normalization for SmartMonetize.
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    filename='data_collection.log'
-)
+The collector is deliberately local-first. It reads metrics supplied by the
+operator instead of scraping private dashboards or pretending to infer behavior
+from arbitrary pages.
+"""
 
-class DataCollector:
-    """Handles web scraping and API data collection for user behavior and market trends."""
-    
-    def __init__(self, api_key: str) -> None:
-        self.api_key = api_key
-        self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.121 Safari/537.36'
-        }
-        
-    def collect_user_behavior(self, url: str) -> Dict:
-        """Scrapes user interaction data from a given URL."""
-        try:
-            response = requests.get(url, headers=self.headers)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.text, 'html.parser')
-            # Extract user behavior metrics
-            metrics = {
-                'user_interactions': self._parse_user_actions(soup),
-                'session_duration': self._extract_session_time(soup),
-                'conversion_rate': self._calculate_conversion_rate(soup)
-            }
-            return metrics
-        except requests.exceptions.RequestException as e:
-            logging.error(f"Request failed: {e}")
-            raise
-        
-    def collect_market_trends(self, endpoint: str) -> Dict:
-        """Fetches market trend data from an API endpoint."""
-        try:
-            response = requests.get(endpoint, headers={'Authorization': f'Bearer {self.api_key}'})
-            response.raise_for_status()
-            return response.json()
-        except requests.exceptions.RequestException as e:
-            logging.error(f"API request failed: {e}")
-            raise
-    
-    def _parse_user_actions(self, soup: BeautifulSoup) -> int:
-        """Parses user action count from the webpage."""
-        actions = soup.find_all('div', class_='user-action')
-        return len(actions)
-    
-    def _extract_session_time(self, soup: BeautifulSoup) -> Optional[float]:
-        """Extracts session duration in seconds."""
-        time_tag = soup.find('span', class_='session-time')
-        if time_tag:
-            return float(time_tag.text)
-        return None
-    
-    def _calculate_conversion_rate(self, soup: BeautifulSoup) -> float:
-        """Calculates conversion rate based on form submissions."""
-        conversion_elements = soup.find_all('div', class_='conversion')
-        successful = sum(1 for el in conversion_elements if 'success' in el.text)
-        total = len(conversion_elements)
-        return (successful / total) * 100 if total > 0 else 0.0
+from __future__ import annotations
+
+import json
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any
+
+
+@dataclass(frozen=True)
+class ProductMetrics:
+    product: str
+    monthly_visitors: int = 0
+    qualified_clicks: int = 0
+    signups: int = 0
+    paid_customers: int = 0
+    average_price_usd: float = 0.0
+    has_clear_offer: bool = False
+    has_checkout: bool = False
+    has_analytics: bool = False
+    owner_minutes_available: int = 30
+
+    @property
+    def visitor_to_click_rate(self) -> float:
+        if self.monthly_visitors <= 0:
+            return 0.0
+        return self.qualified_clicks / self.monthly_visitors
+
+    @property
+    def signup_rate(self) -> float:
+        if self.qualified_clicks <= 0:
+            return 0.0
+        return self.signups / self.qualified_clicks
+
+    @property
+    def paid_conversion_rate(self) -> float:
+        if self.signups <= 0:
+            return 0.0
+        return self.paid_customers / self.signups
+
+
+def _as_int(value: Any, default: int = 0) -> int:
+    try:
+        return max(0, int(value))
+    except (TypeError, ValueError):
+        return default
+
+
+def _as_float(value: Any, default: float = 0.0) -> float:
+    try:
+        return max(0.0, float(value))
+    except (TypeError, ValueError):
+        return default
+
+
+def _as_bool(value: Any) -> bool:
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        return value.strip().lower() in {"1", "true", "yes", "y", "on"}
+    return bool(value)
+
+
+def metrics_from_dict(data: dict[str, Any]) -> ProductMetrics:
+    return ProductMetrics(
+        product=str(data.get("product") or "Unnamed product").strip() or "Unnamed product",
+        monthly_visitors=_as_int(data.get("monthly_visitors")),
+        qualified_clicks=_as_int(data.get("qualified_clicks")),
+        signups=_as_int(data.get("signups")),
+        paid_customers=_as_int(data.get("paid_customers")),
+        average_price_usd=_as_float(data.get("average_price_usd")),
+        has_clear_offer=_as_bool(data.get("has_clear_offer")),
+        has_checkout=_as_bool(data.get("has_checkout")),
+        has_analytics=_as_bool(data.get("has_analytics")),
+        owner_minutes_available=_as_int(data.get("owner_minutes_available"), 30),
+    )
+
+
+def load_metrics(path: str | Path) -> ProductMetrics:
+    source = Path(path)
+    data = json.loads(source.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        raise ValueError("metrics file must contain a JSON object")
+    return metrics_from_dict(data)
