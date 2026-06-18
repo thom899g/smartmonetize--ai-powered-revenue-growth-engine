@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smartmonetize"
+version = "0.1.0"
+description = "Deterministic revenue triage CLI for small products with attention but no paid conversion."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "thom899g" }]
+license = { text = "MIT" }
+keywords = [
+  "revenue",
+  "monetization",
+  "saas",
+  "conversion",
+  "market-validation",
+  "startup",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Office/Business",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine"
+Offer = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/blob/main/OFFER.md"
+
+[project.scripts]
+smartmonetize = "smartmonetize.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["smartmonetize*"]

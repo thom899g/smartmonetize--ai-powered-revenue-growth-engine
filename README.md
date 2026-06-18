@@ -17,6 +17,13 @@ SmartMonetize is a lightweight audit tool that turns a few product metrics into 
 python3 -m smartmonetize.cli examples/saas_metrics.json
 ```
 
+After cloning locally, you can also install the console command:
+
+```bash
+python3 -m pip install -e .
+smartmonetize examples/saas_metrics.json --markdown report.md
+```
+
 Example output:
 
 ```text
