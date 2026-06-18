@@ -28,6 +28,9 @@ def test_sample_report_shows_deliverable_and_boundaries():
     release_notes = Path("RELEASE_NOTES.md").read_text(encoding="utf-8")
     quickstart = Path("QUICKSTART_TRIAGE.md").read_text(encoding="utf-8")
     case_study = Path("CASE_STUDY.md").read_text(encoding="utf-8")
+    mcp_x402_audit = Path("MCP_X402_ENDPOINT_AUDIT.md").read_text(
+        encoding="utf-8"
+    )
     ontario_metrics = Path("examples/ontario_protocol_metrics.json").read_text(
         encoding="utf-8"
     )
@@ -52,3 +55,12 @@ def test_sample_report_shows_deliverable_and_boundaries():
     assert "self-funded test payment" in case_study
     assert "Revenue Triage Audit Request" in case_study
     assert "Ontario Protocol" in ontario_metrics
+    assert "MCP_X402_ENDPOINT_AUDIT.md" in readme
+    assert "MCP_X402_ENDPOINT_AUDIT.md" in offer
+    assert "MCP_X402_ENDPOINT_AUDIT.md" in quickstart
+    assert "MCP/x402 Endpoint Mini-Audit" in release_notes
+    assert "McpX402Audit" in pyproject
+    assert "$199" in mcp_x402_audit
+    assert "No guarantee" in mcp_x402_audit or "no guarantee" in mcp_x402_audit
+    assert "Do not send passwords" in mcp_x402_audit
+    assert "Revenue Triage Audit Request" in mcp_x402_audit

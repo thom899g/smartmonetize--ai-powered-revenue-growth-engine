@@ -56,6 +56,8 @@ Read [`SAMPLE_REPORT.md`](SAMPLE_REPORT.md) before requesting help. A good reque
 
 For a real public-product pattern, read [`CASE_STUDY.md`](CASE_STUDY.md). It shows a product with directory/crawler evidence, working payment-aware surfaces, and still no verified customer revenue.
 
+If your product is an MCP, x402, paid API, or agent-callable endpoint, read [`MCP_X402_ENDPOINT_AUDIT.md`](MCP_X402_ENDPOINT_AUDIT.md) before requesting help. That package is more specific than the generic revenue triage audit.
+
 ## 5. Request A Pilot Audit
 
 If your product has real attention and the triage points to a paid-test gap, open the audit request:

@@ -91,10 +91,19 @@ The pilot is best for founders with some attention but no revenue yet. No privat
 
 To signal interest, open an issue using the `Revenue Triage Audit Request` template. Do not include passwords, private customer data, payment details, or confidential business data.
 
+## New Package: MCP/x402 Endpoint Mini-Audit
+
+For builders with an MCP, x402, paid API, or agent-callable endpoint, there is now a sharper package:
+
+**MCP/x402 Endpoint Mini-Audit - $199 pilot**
+
+It reviews what agents, crawlers, and directories can publicly see; checks payment-readiness metadata; identifies the top buyer-trust blockers; and returns one shippable action plan. It does not guarantee listing acceptance, payment, or future revenue.
+
 Before opening an issue, inspect the sample deliverable:
 
 - [Sample SmartMonetize revenue triage report](SAMPLE_REPORT.md)
 - [Public Ontario Protocol case study](CASE_STUDY.md)
+- [MCP/x402 Endpoint Mini-Audit package](MCP_X402_ENDPOINT_AUDIT.md)
 - [5-minute self-service triage](QUICKSTART_TRIAGE.md)
 - [Pilot offer and scope](OFFER.md)
 - [Audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml)
