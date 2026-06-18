@@ -66,6 +66,24 @@ It helps answer the only question that matters:
 
 > What is the fastest ethical move from attention to revenue evidence?
 
+## Pilot Offer
+
+I am testing a small paid audit service around this tool:
+
+**SmartMonetize Revenue Triage Audit - $49 pilot**
+
+Send public/non-sensitive metrics for one product and receive:
+
+- a ranked revenue action report
+- the top 3 fastest ethical monetization moves
+- one buyer-facing offer rewrite
+- one measurement plan for the next 7 days
+- a clear kill/scale/revise decision
+
+The pilot is best for founders with some attention but no revenue yet. No private analytics access is required; paste rough public numbers or anonymized metrics.
+
+To signal interest, open an issue using the `Revenue Triage Audit Request` template. Do not include passwords, private customer data, payment details, or confidential business data.
+
 ## Example Revenue Moves
 
 - Add a direct paid pilot CTA.

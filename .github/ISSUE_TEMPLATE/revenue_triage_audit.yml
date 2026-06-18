@@ -1,0 +1,51 @@
+name: Revenue Triage Audit Request
+description: Request a SmartMonetize revenue triage audit for a product with attention but weak conversion.
+title: "[Audit Request]: "
+labels: ["revenue-audit", "pilot-interest"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing SmartMonetize. Do not include passwords, API keys, payment details, private customer data, or confidential business data.
+  - type: input
+    id: product
+    attributes:
+      label: Product name
+      description: What product should be triaged?
+      placeholder: Example SaaS
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Public URL
+      description: Public page, repo, demo, or landing page.
+      placeholder: https://example.com
+    validations:
+      required: false
+  - type: textarea
+    id: signal
+    attributes:
+      label: Current market signal
+      description: What attention exists already?
+      placeholder: "Example: 1,200 monthly visitors, 45 qualified clicks, 7 signups, 0 paid customers."
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: What should the audit avoid?
+      placeholder: "No cold outreach, no paid ads, no payment provider changes, etc."
+    validations:
+      required: false
+  - type: dropdown
+    id: pilot_interest
+    attributes:
+      label: Are you interested in the $49 pilot audit?
+      options:
+        - "Yes, if the fit is clear"
+        - "Maybe, show me the free triage first"
+        - "No, open-source feedback only"
+    validations:
+      required: true
