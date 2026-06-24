@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for testing SmartMonetize. Do not include passwords, API keys, payment details, private customer data, or confidential business data.
+        Thanks for testing SmartMonetize. This issue is a free public fit check first: one public URL, one real signal, and one desired outcome are enough to decide whether a paid pilot is worth discussing. Do not include passwords, API keys, payment details, private customer data, or confidential business data.
   - type: dropdown
     id: package_type
     attributes:
@@ -57,7 +57,7 @@ body:
       description: What would make the audit useful?
       placeholder: "Accepted listing, paid call, buyer-safe readiness proof, owner inquiry, or a sharper paid offer."
     validations:
-      required: false
+      required: true
   - type: textarea
     id: constraints
     attributes:

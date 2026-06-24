@@ -47,6 +47,7 @@ def test_sample_report_shows_deliverable_and_boundaries():
     assert "QUICKSTART_TRIAGE.md" in readme
     assert "Found This From `x402-service`, `mcp-server`, Or `agent-commerce`?" in readme
     assert "Revenue Triage Audit Request" in readme
+    assert "free public fit-check issue" in readme
     assert "Do not include passwords" in readme
     assert "SampleReport" in pyproject
     assert "AuditRequest" in pyproject
@@ -71,3 +72,6 @@ def test_sample_report_shows_deliverable_and_boundaries():
     assert "No guarantee" in mcp_x402_audit or "no guarantee" in mcp_x402_audit
     assert "passwords" in mcp_x402_audit
     assert "Revenue Triage Audit Request" in mcp_x402_audit
+    assert "free public fit check first" in Path(
+        ".github/ISSUE_TEMPLATE/revenue_triage_audit.yml"
+    ).read_text(encoding="utf-8")
