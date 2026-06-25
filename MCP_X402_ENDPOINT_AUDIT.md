@@ -16,6 +16,8 @@ Good fit:
 - public crawler or developer traffic exists but no owner inquiry or paid call follows
 - a founder needs a buyer-safe proof packet before asking agents or directories to trust the endpoint
 
+Fastest current fit: an endpoint has crawler or directory hits, public x402/MCP metadata, and `paid_calls=0`. The mini-audit starts by finding the smallest public trust or handoff gap between machine discovery and a real buyer action.
+
 Bad fit:
 
 - private endpoints that require admin credentials
