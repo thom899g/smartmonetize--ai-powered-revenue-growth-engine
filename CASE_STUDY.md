@@ -13,13 +13,14 @@ This public case study shows how SmartMonetize handles a product with real distr
 
 ## Live Evidence Snapshot
 
-Checked: `2026-06-25T09:08:25Z`.
+Checked: `2026-06-25T11:08:46Z`.
 
-- Verification reports: `total_reports=2942`, `ready=2778`, `close=55`, `needs_work=109`.
+- Verification reports: `total_reports=2948`, `ready=2784`, `close=55`, `needs_work=109`.
 - Discovery counters: `x402_probe=8`, `agent_crawler_hit=1`, `developer_tool_hit=1`.
 - Conversion counters: `paid_call=0`, `readiness_subscription_intent=0`, `alert_subscriptions=0`, `third_party_submission=0`.
 - x402 counters: `402_responses=8`, `paid_calls=0`, `settle_attempts=0`, `settle_successes=0`.
 - Ledger boundary: one settled `0.01` USDC proof-of-life row exists, but it is self-funded and not customer revenue.
+- Movement since the prior public snapshot: verification reports increased by `6` and ready reports increased by `6`; conversion counters stayed at zero.
 
 ## Input Metrics
 
