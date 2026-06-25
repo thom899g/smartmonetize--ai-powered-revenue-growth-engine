@@ -13,14 +13,14 @@ This public case study shows how SmartMonetize handles a product with real distr
 
 ## Live Evidence Snapshot
 
-Checked: `2026-06-25T17:12:07Z`.
+Checked: `2026-06-25T19:13:23Z`.
 
-- Verification reports: `total_reports=2966`, `ready=2802`, `close=55`, `needs_work=109`.
-- Discovery counters: `x402_probe=9`, `agent_crawler_hit=2`, `developer_tool_hit=0`.
+- Verification reports: `total_reports=2972`, `ready=2808`, `close=55`, `needs_work=109`.
+- Discovery counters: `x402_probe=8`, `agent_crawler_hit=3`, `developer_tool_hit=4`.
 - Conversion counters: `paid_call=0`, `readiness_subscription_intent=0`, `alert_subscriptions=0`, `third_party_submission=0`.
-- x402 counters: `402_responses=9`, `paid_calls=0`, `settle_attempts=0`, `settle_successes=0`.
+- x402 counters: `402_responses=8`, `paid_calls=0`, `settle_attempts=0`, `settle_successes=0`.
 - Ledger boundary: one settled `0.01` USDC proof-of-life row exists, but it is self-funded and not customer revenue.
-- Movement since the prior public snapshot: verification reports increased by `12`, ready reports increased by `12`, and `x402_probe` increased by `1`; conversion counters stayed at zero.
+- Movement since the prior public snapshot: verification reports increased by `6`, ready reports increased by `6`, `agent_crawler_hit` increased by `1`, and `developer_tool_hit` increased by `4`; conversion counters stayed at zero.
 
 ## Input Metrics
 
@@ -30,7 +30,7 @@ The local example file is [`examples/ontario_protocol_metrics.json`](examples/on
 {
   "product": "Ontario Protocol",
   "monthly_visitors": 120,
-  "qualified_clicks": 11,
+  "qualified_clicks": 15,
   "signups": 0,
   "paid_customers": 0,
   "average_price_usd": 49,
@@ -43,7 +43,7 @@ The local example file is [`examples/ontario_protocol_metrics.json`](examples/on
 
 These are intentionally conservative rough numbers. They are not private analytics exports.
 
-The `qualified_clicks` value is a proxy for public machine attention in the current run: `x402_probe + agent_crawler_hit + developer_tool_hit`.
+The `qualified_clicks` value is a proxy for public machine attention in the current run: `x402_probe + agent_crawler_hit + developer_tool_hit`. Treat counter resets or decreases as telemetry hygiene issues, not customer revenue.
 
 ## Run It
 
