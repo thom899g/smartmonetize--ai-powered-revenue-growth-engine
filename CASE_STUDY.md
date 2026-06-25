@@ -13,15 +13,15 @@ This public case study shows how SmartMonetize handles a product with real distr
 
 ## Live Evidence Snapshot
 
-Checked: `2026-06-25T21:14:40Z`.
+Checked: `2026-06-25T23:14:26Z`.
 
-- Verification reports: `total_reports=2978`, `ready=2814`, `close=55`, `needs_work=109`.
-- Discovery counters: `x402_probe=8`, `agent_crawler_hit=3`, `developer_tool_hit=0`.
+- Verification reports: `total_reports=2984`, `ready=2820`, `close=55`, `needs_work=109`.
+- Discovery counters: `x402_probe=16`, `agent_crawler_hit=9`, `developer_tool_hit=6`, `human_visit=3`.
 - Conversion counters: `paid_call=0`, `readiness_subscription_intent=0`, `alert_subscriptions=0`, `third_party_submission=0`.
-- x402 counters: `402_responses=8`, `paid_calls=0`, `settle_attempts=0`, `settle_successes=0`.
+- x402 counters: `402_responses=16`, `paid_calls=0`, `settle_attempts=0`, `settle_successes=0`.
 - Ledger boundary: one settled `0.01` USDC proof-of-life row exists, but it is self-funded and not customer revenue.
-- Movement since the prior public snapshot: verification reports increased by `6` and ready reports increased by `6`; conversion counters stayed at zero.
-- Counter hygiene: `developer_tool_hit` reset from `4` to `0`, so SmartMonetize treats it as telemetry hygiene rather than negative customer evidence.
+- Movement since the prior public snapshot: verification reports increased by `6`, ready reports increased by `6`, `x402_probe` increased by `8`, `agent_crawler_hit` increased by `6`, and `developer_tool_hit` recovered from `0` to `6`; conversion counters stayed at zero.
+- Counter hygiene: counter resets or drops are treated as telemetry hygiene until they are tied to buyer action; increases are useful attention signals, not customer revenue.
 
 ## Input Metrics
 
@@ -31,7 +31,7 @@ The local example file is [`examples/ontario_protocol_metrics.json`](examples/on
 {
   "product": "Ontario Protocol",
   "monthly_visitors": 120,
-  "qualified_clicks": 11,
+  "qualified_clicks": 31,
   "signups": 0,
   "paid_customers": 0,
   "average_price_usd": 49,
@@ -44,7 +44,7 @@ The local example file is [`examples/ontario_protocol_metrics.json`](examples/on
 
 These are intentionally conservative rough numbers. They are not private analytics exports.
 
-The `qualified_clicks` value is a proxy for public machine attention in the current run: `x402_probe + agent_crawler_hit + developer_tool_hit`. Treat counter resets or decreases as telemetry hygiene issues, not customer revenue or lost revenue.
+The `qualified_clicks` value is a proxy for public machine attention in the current run: `x402_probe + agent_crawler_hit + developer_tool_hit`. Human visits are tracked separately because they are attention, but not enough by themselves to prove buyer intent. Treat counter resets or decreases as telemetry hygiene issues, not customer revenue or lost revenue.
 
 ## Run It
 
