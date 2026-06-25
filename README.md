@@ -12,7 +12,7 @@ If you run a paid API, MCP server, x402 endpoint, or agent-callable tool that ha
 - [Revenue Triage Audit Request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml) - open a free public fit-check issue with one URL and one real signal; no payment path is created until fit is explicit.
 - [Ontario Protocol case study](CASE_STUDY.md) - live example with crawler/developer attention, payment-aware surfaces, and no counted customer revenue yet.
 
-Good fit: public endpoint, manifest, repo, or landing page with stars, crawler hits, search impressions, demo usage, or directory attention but no clear buyer action. Do not include passwords, API keys, private customer data, payment details, or confidential business data.
+Good fit: public endpoint, manifest, repo, or landing page with stars, crawler hits, search impressions, demo usage, or directory attention but no clear buyer action. For MCP/x402 endpoints, include the current public counters that prove the boundary, such as `x402_probe`, `agent_crawler_hit`, `developer_tool_hit`, and `paid_calls=0`. Do not include passwords, API keys, private customer data, payment details, or confidential business data.
 
 ## What It Does
 

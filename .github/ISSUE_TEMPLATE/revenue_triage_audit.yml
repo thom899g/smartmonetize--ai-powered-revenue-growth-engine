@@ -47,7 +47,15 @@ body:
     attributes:
       label: Current market signal
       description: What attention exists already?
-      placeholder: "Example: directory crawler hit, public repo star, search impression, demo click, 7 signups, 0 paid calls."
+      placeholder: "Example: total_reports=2936, ready_reports=2772, x402_probe=8, agent_crawler_hit=4, developer_tool_hit=3, paid_calls=0."
+    validations:
+      required: true
+  - type: textarea
+    id: conversion_boundary
+    attributes:
+      label: Current conversion boundary
+      description: Where does attention stop before buyer action?
+      placeholder: "Example: crawlers can fetch the manifest and reports, but no paid call, listing submission, signup, booked call, or buyer reply has happened yet."
     validations:
       required: true
   - type: textarea
