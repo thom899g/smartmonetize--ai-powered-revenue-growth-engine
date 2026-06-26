@@ -44,9 +44,17 @@ body:
     attributes:
       label: Current public market signal
       description: Paste the smallest public snapshot that proves real attention.
-      placeholder: "Example: total_reports=3026, ready_reports=2862, agent_crawler_hit=23, developer_tool_hit=2, x402_probe=16, repo_stars=1."
+      placeholder: "Example: total_reports=3032, ready_reports=2868, agent_crawler_hit=166, developer_tool_hit=15, x402_probe=32, repo_stars=1."
     validations:
       required: true
+  - type: textarea
+    id: discovery_source
+    attributes:
+      label: Where did the attention come from?
+      description: "Public source only: directory, repo, crawler logs, search console aggregate, API counter, or listing URL."
+      placeholder: "Example: awesome-x402 listing, MCP directory fetches, public repo traffic, x402 probe counter, or crawler user-agent aggregate."
+    validations:
+      required: false
   - type: textarea
     id: conversion_boundary
     attributes:

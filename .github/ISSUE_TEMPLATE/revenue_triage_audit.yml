@@ -47,9 +47,17 @@ body:
     attributes:
       label: Current market signal
       description: What attention exists already?
-      placeholder: "Example: total_reports=2936, ready_reports=2772, x402_probe=8, agent_crawler_hit=4, developer_tool_hit=3, paid_calls=0."
+      placeholder: "Example: total_reports=3032, ready_reports=2868, x402_probe=32, agent_crawler_hit=166, developer_tool_hit=15, paid_calls=0."
     validations:
       required: true
+  - type: textarea
+    id: discovery_source
+    attributes:
+      label: Where did the attention come from?
+      description: "Public source only: directory, repo, crawler logs, search console aggregate, API counter, or listing URL."
+      placeholder: "Example: directory listing views, public repo stars, API counter, x402 probe counter, search impressions, or crawler user-agent aggregate."
+    validations:
+      required: false
   - type: textarea
     id: conversion_boundary
     attributes:
