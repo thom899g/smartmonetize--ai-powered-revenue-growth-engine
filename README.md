@@ -14,6 +14,19 @@ If you run a paid API, MCP server, x402 endpoint, or agent-callable tool that ha
 
 Good fit: public endpoint, manifest, repo, or landing page with stars, crawler hits, search impressions, demo usage, or directory attention but no clear buyer action. For MCP/x402 endpoints, include the current public counters that prove the boundary, such as `x402_probe`, `agent_crawler_hit`, `developer_tool_hit`, and `paid_calls=0`. Do not include passwords, API keys, private customer data, payment details, or confidential business data.
 
+Fastest request path: open the audit issue and paste a public counter snapshot like this:
+
+```text
+Package: MCP/x402 Endpoint Mini-Audit - $199 pilot
+Endpoint:
+x402 manifest:
+MCP manifest:
+Current market signal: reports, crawler hits, directory views, repo stars, search impressions, or demo usage
+Current conversion boundary: paid_calls=0, listing submissions=0, subscriptions=0, buyer replies=0
+Desired outcome: one buyer-safe next action for an agent, directory, or endpoint owner
+Constraints: public data only; no outreach, ads, payment-provider changes, or private analytics access
+```
+
 ## What It Does
 
 - Scores revenue opportunities by expected value, speed, repeatability, owner time, risk, and implementation cost.
