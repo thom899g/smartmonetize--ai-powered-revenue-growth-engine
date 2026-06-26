@@ -1,1 +1,8 @@
 blank_issues_enabled: false
+contact_links:
+  - name: MCP/x402 Endpoint Mini-Audit scope
+    url: https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/blob/main/MCP_X402_ENDPOINT_AUDIT.md
+    about: Check the $199 pilot scope before opening a public fit-check issue.
+  - name: Ontario Protocol public case study
+    url: https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/blob/main/CASE_STUDY.md
+    about: See the current machine-attention to buyer-action boundary this package is designed for.
