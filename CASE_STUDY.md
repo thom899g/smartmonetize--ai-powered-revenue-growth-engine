@@ -13,14 +13,14 @@ This public case study shows how SmartMonetize handles a product with real distr
 
 ## Live Evidence Snapshot
 
-Checked: `2026-06-26T09:19:33Z`.
+Checked: `2026-06-26T23:22:41Z`.
 
-- Verification reports: `total_reports=3014`, `ready=2850`, `close=55`, `needs_work=109`.
-- Discovery counters: `x402_probe=17`, `agent_crawler_hit=11`, `developer_tool_hit=0`, `human_visit=2`.
+- Verification reports: `total_reports=3057`, `ready=2892`, `close=55`, `needs_work=110`.
+- Discovery counters: `x402_probe=4`, `agent_crawler_hit=3`, `developer_tool_hit=1`, `human_visit=1`.
 - Conversion counters: `paid_call=0`, `readiness_subscription_intent=0`, `alert_subscriptions=0`, `third_party_submission=0`.
-- x402 counters: `402_responses=17`, `paid_calls=0`, `settle_attempts=0`, `settle_successes=0`.
+- x402 counters: `402_responses=4`, `paid_calls=0`, `settle_attempts=0`, `settle_successes=0`.
 - Ledger boundary: one settled `0.01` USDC proof-of-life row exists, but it is self-funded and not customer revenue.
-- Movement since the prior public snapshot: verification reports increased by `12`, ready reports increased by `12`, `x402_probe`/`402_responses` increased from `16` to `17`, and `human_visit` increased from `0` to `2`. `agent_crawler_hit` moved from `12` to `11` and `developer_tool_hit` moved from `5` to `0`; treat those drops as telemetry hygiene until they are tied to buyer action. Conversion counters stayed at zero.
+- Movement since the prior public snapshot: verification reports increased from `3014` to `3057`, ready reports increased from `2850` to `2892`, and the latest window again shows crawler/probe activity with `x402_probe=4`, `agent_crawler_hit=3`, `developer_tool_hit=1`, and `human_visit=1`. Conversion counters stayed at zero.
 - Counter hygiene: counter resets or drops are treated as telemetry hygiene until they are tied to buyer action; report growth, probe visibility, and human visits are useful attention signals, not customer revenue.
 
 ## Input Metrics
