@@ -13,15 +13,15 @@ This public case study shows how SmartMonetize handles a product with real distr
 
 ## Live Evidence Snapshot
 
-Checked: `2026-06-26T05:18:25Z`.
+Checked: `2026-06-26T09:19:33Z`.
 
-- Verification reports: `total_reports=3002`, `ready=2838`, `close=55`, `needs_work=109`.
-- Discovery counters: `x402_probe=16`, `agent_crawler_hit=12`, `developer_tool_hit=5`, `human_visit=0`.
+- Verification reports: `total_reports=3014`, `ready=2850`, `close=55`, `needs_work=109`.
+- Discovery counters: `x402_probe=17`, `agent_crawler_hit=11`, `developer_tool_hit=0`, `human_visit=2`.
 - Conversion counters: `paid_call=0`, `readiness_subscription_intent=0`, `alert_subscriptions=0`, `third_party_submission=0`.
-- x402 counters: `402_responses=16`, `paid_calls=0`, `settle_attempts=0`, `settle_successes=0`.
+- x402 counters: `402_responses=17`, `paid_calls=0`, `settle_attempts=0`, `settle_successes=0`.
 - Ledger boundary: one settled `0.01` USDC proof-of-life row exists, but it is self-funded and not customer revenue.
-- Movement since the prior public snapshot: verification reports increased by `6`, ready reports increased by `6`, `agent_crawler_hit` increased from `9` to `12`, `developer_tool_hit` increased from `0` to `5`, and `x402_probe`/`402_responses` increased from `8` to `16`. Conversion counters stayed at zero.
-- Counter hygiene: counter resets or drops are treated as telemetry hygiene until they are tied to buyer action; report growth and probe visibility are useful attention signals, not customer revenue.
+- Movement since the prior public snapshot: verification reports increased by `12`, ready reports increased by `12`, `x402_probe`/`402_responses` increased from `16` to `17`, and `human_visit` increased from `0` to `2`. `agent_crawler_hit` moved from `12` to `11` and `developer_tool_hit` moved from `5` to `0`; treat those drops as telemetry hygiene until they are tied to buyer action. Conversion counters stayed at zero.
+- Counter hygiene: counter resets or drops are treated as telemetry hygiene until they are tied to buyer action; report growth, probe visibility, and human visits are useful attention signals, not customer revenue.
 
 ## Input Metrics
 
@@ -31,7 +31,7 @@ The local example file is [`examples/ontario_protocol_metrics.json`](examples/on
 {
   "product": "Ontario Protocol",
   "monthly_visitors": 120,
-  "qualified_clicks": 33,
+  "qualified_clicks": 28,
   "signups": 0,
   "paid_customers": 0,
   "average_price_usd": 49,
