@@ -31,6 +31,7 @@ def test_issue_template_captures_buyer_interest_without_private_data():
     assert "mcp_manifest" in mcp_template
     assert "current_signal" in mcp_template
     assert "paid_calls=0" in mcp_template
+    assert "reset-prone counters" in mcp_template
     assert "Do not include passwords" in mcp_template
 
 
@@ -84,7 +85,11 @@ def test_sample_report_shows_deliverable_and_boundaries():
     assert "$199" in mcp_x402_audit
     assert "No guarantee" in mcp_x402_audit or "no guarantee" in mcp_x402_audit
     assert "passwords" in mcp_x402_audit
+    assert "durable totals" in mcp_x402_audit
     assert "MCP/x402 Endpoint Mini-Audit Request" in mcp_x402_audit
+    assert "latest-window counters" in Path(
+        "EXAMPLE_MCP_X402_AUDIT_REQUEST.md"
+    ).read_text(encoding="utf-8")
     assert "free public fit check first" in Path(
         ".github/ISSUE_TEMPLATE/revenue_triage_audit.yml"
     ).read_text(encoding="utf-8")

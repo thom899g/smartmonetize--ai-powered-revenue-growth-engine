@@ -43,8 +43,8 @@ body:
     id: current_signal
     attributes:
       label: Current public market signal
-      description: Paste the smallest public snapshot that proves real attention.
-      placeholder: "Example: total_reports=3032, ready_reports=2868, agent_crawler_hit=166, developer_tool_hit=15, x402_probe=32, repo_stars=1."
+      description: Paste the smallest public snapshot that proves real attention. Split durable totals from reset-prone counters when possible.
+      placeholder: "Example: durable totals: total_reports=3051, ready_reports=2886. Latest window: developer_tool_hit=4, paid_calls=0. Prior window if known: agent_crawler_hit=240, x402_probe=64."
     validations:
       required: true
   - type: textarea
