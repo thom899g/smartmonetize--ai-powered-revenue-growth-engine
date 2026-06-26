@@ -14,6 +14,9 @@ def test_issue_template_captures_buyer_interest_without_private_data():
     template = Path(".github/ISSUE_TEMPLATE/revenue_triage_audit.yml").read_text(
         encoding="utf-8"
     )
+    mcp_template = Path(".github/ISSUE_TEMPLATE/mcp_x402_endpoint_audit.yml").read_text(
+        encoding="utf-8"
+    )
 
     assert "package_type" in template
     assert "MCP/x402 Endpoint Mini-Audit - $199 pilot" in template
@@ -22,6 +25,13 @@ def test_issue_template_captures_buyer_interest_without_private_data():
     assert "pilot_interest" in template
     assert "Do not include passwords" in template
     assert "revenue-audit" in template
+    assert "MCP/x402 Endpoint Mini-Audit Request" in mcp_template
+    assert "mcp-x402" in mcp_template
+    assert "x402_manifest" in mcp_template
+    assert "mcp_manifest" in mcp_template
+    assert "current_signal" in mcp_template
+    assert "paid_calls=0" in mcp_template
+    assert "Do not include passwords" in mcp_template
 
 
 def test_sample_report_shows_deliverable_and_boundaries():
@@ -47,6 +57,8 @@ def test_sample_report_shows_deliverable_and_boundaries():
     assert "QUICKSTART_TRIAGE.md" in readme
     assert "Found This From `x402-service`, `mcp-server`, Or `agent-commerce`?" in readme
     assert "Revenue Triage Audit Request" in readme
+    assert "MCP/x402 Endpoint Mini-Audit Request" in readme
+    assert "mcp_x402_endpoint_audit.yml" in readme
     assert "free public fit-check issue" in readme
     assert "Do not include passwords" in readme
     assert "SampleReport" in pyproject
@@ -68,10 +80,11 @@ def test_sample_report_shows_deliverable_and_boundaries():
     assert "MCP_X402_ENDPOINT_AUDIT.md" in quickstart
     assert "MCP/x402 Endpoint Mini-Audit" in release_notes
     assert "McpX402Audit" in pyproject
+    assert "McpX402AuditRequest" in pyproject
     assert "$199" in mcp_x402_audit
     assert "No guarantee" in mcp_x402_audit or "no guarantee" in mcp_x402_audit
     assert "passwords" in mcp_x402_audit
-    assert "Revenue Triage Audit Request" in mcp_x402_audit
+    assert "MCP/x402 Endpoint Mini-Audit Request" in mcp_x402_audit
     assert "free public fit check first" in Path(
         ".github/ISSUE_TEMPLATE/revenue_triage_audit.yml"
     ).read_text(encoding="utf-8")

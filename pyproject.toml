@@ -33,6 +33,7 @@ Homepage = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth
 Offer = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/blob/main/OFFER.md"
 SampleReport = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/blob/main/SAMPLE_REPORT.md"
 AuditRequest = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml"
+McpX402AuditRequest = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml"
 McpX402Audit = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/blob/main/MCP_X402_ENDPOINT_AUDIT.md"
 
 [project.scripts]

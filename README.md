@@ -9,12 +9,12 @@ SmartMonetize is a lightweight audit tool that turns a few product metrics into 
 If you run a paid API, MCP server, x402 endpoint, or agent-callable tool that has attention but no paid usage, start here:
 
 - [MCP/x402 Endpoint Mini-Audit package](MCP_X402_ENDPOINT_AUDIT.md) - `$199` pilot for one public endpoint.
-- [Revenue Triage Audit Request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml) - open a free public fit-check issue with one URL and one real signal; no payment path is created until fit is explicit.
+- [MCP/x402 Endpoint Mini-Audit Request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml) - open a free public fit-check issue with one endpoint and one real signal; no payment path is created until fit is explicit.
 - [Ontario Protocol case study](CASE_STUDY.md) - live example with crawler/developer attention, payment-aware surfaces, and no counted customer revenue yet.
 
 Good fit: public endpoint, manifest, repo, or landing page with stars, crawler hits, search impressions, demo usage, or directory attention but no clear buyer action. For MCP/x402 endpoints, include the current public counters that prove the boundary, such as `x402_probe`, `agent_crawler_hit`, `developer_tool_hit`, and `paid_calls=0`. Do not include passwords, API keys, private customer data, payment details, or confidential business data.
 
-Fastest request path: open the audit issue and paste a public counter snapshot like this:
+Fastest request path: open the MCP/x402 audit issue and paste a public counter snapshot like this:
 
 ```text
 Package: MCP/x402 Endpoint Mini-Audit - $199 pilot
@@ -129,7 +129,8 @@ Before opening an issue, inspect the sample deliverable:
 - [MCP/x402 Endpoint Mini-Audit package](MCP_X402_ENDPOINT_AUDIT.md)
 - [5-minute self-service triage](QUICKSTART_TRIAGE.md)
 - [Pilot offer and scope](OFFER.md)
-- [Audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml)
+- [MCP/x402 audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml)
+- [General revenue triage issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml)
 
 Fast fit check:
 

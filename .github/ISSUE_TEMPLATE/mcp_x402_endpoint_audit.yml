@@ -1,0 +1,83 @@
+name: MCP/x402 Endpoint Mini-Audit Request
+description: Request the $199 public endpoint mini-audit for an MCP, x402, paid API, or agent-callable tool.
+title: "[MCP/x402 Audit Request]: "
+labels: ["revenue-audit", "mcp-x402", "pilot-interest"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when a public MCP, x402 endpoint, paid API, or agent-callable tool has discovery attention but no buyer action yet. This is a free public fit check first. Do not include passwords, API keys, wallet secrets, payment details, private customer data, confidential business data, or private admin URLs.
+  - type: input
+    id: product
+    attributes:
+      label: Product or endpoint name
+      description: What public endpoint should be audited?
+      placeholder: Example MCP Service
+    validations:
+      required: true
+  - type: input
+    id: endpoint
+    attributes:
+      label: Public endpoint URL
+      description: Public MCP, paid API, agent endpoint, repo, or landing page.
+      placeholder: https://example.com/mcp
+    validations:
+      required: true
+  - type: input
+    id: x402_manifest
+    attributes:
+      label: x402 manifest URL
+      description: Leave blank if this is MCP-only or not yet published.
+      placeholder: https://example.com/.well-known/x402.json
+    validations:
+      required: false
+  - type: input
+    id: mcp_manifest
+    attributes:
+      label: MCP manifest URL
+      description: Leave blank if this is x402-only or not yet published.
+      placeholder: https://example.com/.well-known/mcp.json
+    validations:
+      required: false
+  - type: textarea
+    id: current_signal
+    attributes:
+      label: Current public market signal
+      description: Paste the smallest public snapshot that proves real attention.
+      placeholder: "Example: total_reports=3026, ready_reports=2862, agent_crawler_hit=23, developer_tool_hit=2, x402_probe=16, repo_stars=1."
+    validations:
+      required: true
+  - type: textarea
+    id: conversion_boundary
+    attributes:
+      label: Current conversion boundary
+      description: Where does discovery stop before buyer action?
+      placeholder: "Example: paid_calls=0, listing submissions=0, subscriptions=0, buyer replies=0."
+    validations:
+      required: true
+  - type: textarea
+    id: desired_outcome
+    attributes:
+      label: Desired outcome
+      description: What should the mini-audit help produce?
+      placeholder: "Accepted listing, paid call, buyer-safe readiness proof, owner inquiry, or one trusted next action."
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: What should the audit avoid?
+      placeholder: "No cold outreach, no paid ads, no payment-provider changes, public data only."
+    validations:
+      required: false
+  - type: dropdown
+    id: pilot_interest
+    attributes:
+      label: Are you interested in the $199 paid pilot if the fit is clear?
+      options:
+        - "Yes, if the endpoint fit is clear"
+        - "Maybe, show me the free public fit check first"
+        - "No, open-source feedback only"
+    validations:
+      required: true

@@ -83,9 +83,9 @@ Boundary: no guarantee of listing acceptance or revenue.
 
 ## How To Start
 
-Open the same audit request issue and mention `MCP/x402 Endpoint Mini-Audit`:
+Open the dedicated MCP/x402 audit request issue and paste one public signal snapshot:
 
-[Revenue Triage Audit Request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml)
+[MCP/x402 Endpoint Mini-Audit Request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml)
 
 This repository does not collect payment automatically. A paid pilot only happens after a real request and an explicitly agreed payment path.
 
