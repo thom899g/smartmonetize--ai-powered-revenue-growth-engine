@@ -55,6 +55,19 @@ Only public or non-sensitive inputs:
 
 Do not send passwords, private customer data, API keys, wallet secrets, payment details, or private admin URLs.
 
+If your signal is machine attention with no buyer action yet, paste the smallest public snapshot that proves the gap:
+
+```text
+Endpoint:
+x402 manifest:
+MCP manifest:
+Current signal: total_reports=2990, ready_reports=2826, agent_crawler_hit=3, developer_tool_hit=4, x402_probe=3
+Conversion boundary: paid_calls=0, listing submissions=0, subscriptions=0, buyer replies=0
+Desired outcome: one trusted next action for an agent, directory, or endpoint owner
+```
+
+The audit starts from that boundary. It does not need private analytics, wallet secrets, admin access, or a live payment link.
+
 ## Deliverable Shape
 
 The mini-audit is intentionally practical:
