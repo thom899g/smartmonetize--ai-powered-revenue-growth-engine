@@ -87,6 +87,8 @@ Open the dedicated MCP/x402 audit request issue and paste one public signal snap
 
 [MCP/x402 Endpoint Mini-Audit Request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml)
 
+If you are unsure what to paste, copy the safe public structure in [Example MCP/x402 Audit Request](EXAMPLE_MCP_X402_AUDIT_REQUEST.md).
+
 This repository does not collect payment automatically. A paid pilot only happens after a real request and an explicitly agreed payment path.
 
 ## Current Public Example

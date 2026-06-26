@@ -9,6 +9,7 @@ SmartMonetize is a lightweight audit tool that turns a few product metrics into 
 If you run a paid API, MCP server, x402 endpoint, or agent-callable tool that has attention but no paid usage, start here:
 
 - [MCP/x402 Endpoint Mini-Audit package](MCP_X402_ENDPOINT_AUDIT.md) - `$199` pilot for one public endpoint.
+- [Example MCP/x402 audit request](EXAMPLE_MCP_X402_AUDIT_REQUEST.md) - safe public issue shape for endpoint owners with counters but no buyer action.
 - [MCP/x402 Endpoint Mini-Audit Request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml) - open a free public fit-check issue with one endpoint and one real signal; no payment path is created until fit is explicit.
 - [Ontario Protocol case study](CASE_STUDY.md) - live example with crawler/developer attention, payment-aware surfaces, and no counted customer revenue yet.
 
@@ -127,6 +128,7 @@ Before opening an issue, inspect the sample deliverable:
 - [Sample SmartMonetize revenue triage report](SAMPLE_REPORT.md)
 - [Public Ontario Protocol case study](CASE_STUDY.md)
 - [MCP/x402 Endpoint Mini-Audit package](MCP_X402_ENDPOINT_AUDIT.md)
+- [Example MCP/x402 audit request](EXAMPLE_MCP_X402_AUDIT_REQUEST.md)
 - [5-minute self-service triage](QUICKSTART_TRIAGE.md)
 - [Pilot offer and scope](OFFER.md)
 - [MCP/x402 audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml)
