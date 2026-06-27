@@ -20,13 +20,19 @@ MCP manifest URL:
 https://example.com/.well-known/mcp.json
 
 Current public market signal:
-durable totals: total_reports=3075, ready_reports=2910
-latest window: developer_tool_hit=4, x402_probe=0, human_visit=0, agent_crawler_hit=0, paid_calls=0
-prior window if known: agent_crawler_hit=240, developer_tool_hit=33, x402_probe=64
+durable totals: total_reports=3093, ready_reports=2928
+latest window: developer_tool_hit=124, x402_probe=24, human_visit=11, agent_crawler_hit=11, paid_calls=0
+prior window if known: total_reports=3087, ready_reports=2922, developer_tool_hit=5, x402_probe=8, agent_crawler_hit=3, human_visit=1
 repo_stars=1
 
 Where did the attention come from?
-awesome-x402 listing, public visits, MCP manifest fetches, public repo activity, and x402 probe counter.
+awesome-x402 listing, third-party directory page, public visits, MCP manifest fetches, public repo activity, and x402 probe counter.
+
+Directory page if applicable:
+https://agent-tools.cloud/services/ontario-protocol-ontarioprotocol-com-x402
+
+Directory status:
+conformance: fail
 
 Current conversion boundary:
 paid_calls=0

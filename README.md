@@ -16,6 +16,8 @@ If you run a paid API, MCP server, x402 endpoint, or agent-callable tool that ha
 
 Good fit: public endpoint, manifest, repo, or landing page with stars, crawler hits, search impressions, demo usage, or directory attention but no clear buyer action. For MCP/x402 endpoints, include the current public counters that prove the boundary, such as `x402_probe`, `agent_crawler_hit`, `developer_tool_hit`, and `paid_calls=0`. Do not include passwords, API keys, private customer data, payment details, or confidential business data.
 
+Directory `conformance: fail` fast path: if a public directory already lists your MCP/x402 service but labels it as failed, stale, or incomplete, open the fit-check issue with the directory URL, the manifest URL it crawled, the latest public counters, and the zero buyer-action boundary. The first deliverable is a small public fix plan for the endpoint owner, not outreach to the directory.
+
 Fastest request path: open the MCP/x402 audit issue and paste a public counter snapshot like this:
 
 ```text
@@ -29,7 +31,7 @@ Desired outcome: one buyer-safe next action for an agent, directory, or endpoint
 Constraints: public data only; no outreach, ads, payment-provider changes, or private analytics access
 ```
 
-If the only fresh signal is a developer-tool fetch or manifest probe, do not wait for a paid call before asking for the free fit check. Paste the exact latest window and the zero buyer-action boundary, for example `developer_tool_hit=4, paid_calls=0, subscriptions=0, third_party_submission=0`.
+If the only fresh signal is a developer-tool fetch or manifest probe, do not wait for a paid call before asking for the free fit check. Paste the exact latest window and the zero buyer-action boundary, for example `developer_tool_hit=124, agent_crawler_hit=11, x402_probe=24, paid_calls=0, subscriptions=0, third_party_submission=0`.
 
 ## What It Does
 
