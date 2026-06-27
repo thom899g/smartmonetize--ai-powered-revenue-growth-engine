@@ -20,8 +20,8 @@ MCP manifest URL:
 https://example.com/.well-known/mcp.json
 
 Current public market signal:
-durable totals: total_reports=3057, ready_reports=2892
-latest window: x402_probe=4, agent_crawler_hit=3, developer_tool_hit=1, paid_calls=0
+durable totals: total_reports=3063, ready_reports=2898
+latest window: x402_probe=8, agent_crawler_hit=3, developer_tool_hit=10, human_visit=2, paid_calls=0
 prior window if known: agent_crawler_hit=240, developer_tool_hit=33, x402_probe=64
 repo_stars=1
 

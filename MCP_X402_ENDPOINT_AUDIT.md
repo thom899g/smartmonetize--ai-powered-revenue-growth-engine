@@ -20,6 +20,8 @@ Fastest current fit: an endpoint has crawler or directory hits, public x402/MCP 
 
 If report counts and x402 probes keep rising while `paid_calls`, listing submissions, and subscription intent stay at zero, treat that as a conversion problem: the endpoint is being inspected, but the buyer-safe next action is not obvious enough yet.
 
+Developer-tool attention is enough for the free fit check when it is public and concrete. If your latest window shows `developer_tool_hit`, `x402_probe`, MCP manifest fetches, or directory crawler activity but still has `paid_calls=0`, open the issue with those counters and ask for the one action that should come before outreach, ads, or a payment-link change.
+
 If some counters reset while durable totals keep rising, do not treat the reset as lost demand. Submit both views: durable totals such as `total_reports` and `ready_reports`, then the latest-window counters and any prior-window counters that show crawler, probe, or developer-tool attention.
 
 Bad fit:
