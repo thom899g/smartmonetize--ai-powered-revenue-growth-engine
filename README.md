@@ -14,9 +14,9 @@ If you run a paid API, MCP server, x402 endpoint, or agent-callable tool that ha
 - [MCP/x402 Endpoint Mini-Audit Request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml) - open a free public fit-check issue with one endpoint and one real signal; no payment path is created until fit is explicit.
 - [Ontario Protocol case study](CASE_STUDY.md) - live example with crawler/developer attention, payment-aware surfaces, and no counted customer revenue yet.
 
-Good fit: public endpoint, manifest, repo, or landing page with stars, crawler hits, search impressions, demo usage, or directory attention but no clear buyer action. For MCP/x402 endpoints, include the current public counters that prove the boundary, such as `x402_probe`, `agent_crawler_hit`, `developer_tool_hit`, and `paid_calls=0`. Do not include passwords, API keys, private customer data, payment details, or confidential business data.
+Good fit: public endpoint, manifest, repo, or landing page with stars, crawler hits, search impressions, demo usage, or directory attention but no clear buyer action. For MCP/x402 endpoints, include durable totals separately from reset-prone counters: for example `total_reports`, `ready_reports`, current-window `x402_probe`, `agent_crawler_hit`, `developer_tool_hit`, and `paid_calls=0`. Do not include passwords, API keys, private customer data, payment details, or confidential business data.
 
-Directory `conformance: fail` fast path: if a public directory already lists your MCP/x402 service but labels it as failed, stale, or incomplete, open the fit-check issue with the directory URL, the manifest URL it crawled, the latest public counters, and the zero buyer-action boundary. The first deliverable is a small public fix plan for the endpoint owner, not outreach to the directory.
+Directory `conformance: fail` fast path: if a public directory already lists your MCP/x402 service but labels it as failed, stale, incomplete, or disagrees across indexes, open the fit-check issue with the directory URLs, the manifest URL it crawled, durable totals, the latest reset-prone window, and the zero buyer-action boundary. The first deliverable is a small public fix plan for the endpoint owner, not outreach to the directory.
 
 Fastest request path: open the MCP/x402 audit issue and paste a public counter snapshot like this:
 
@@ -25,13 +25,13 @@ Package: MCP/x402 Endpoint Mini-Audit - $199 pilot
 Endpoint:
 x402 manifest:
 MCP manifest:
-Current market signal: reports, crawler hits, directory views, repo stars, search impressions, or demo usage
+Current market signal: durable totals plus current-window reports, crawler hits, directory views, repo stars, search impressions, or demo usage
 Current conversion boundary: paid_calls=0, listing submissions=0, subscriptions=0, buyer replies=0
 Desired outcome: one buyer-safe next action for an agent, directory, or endpoint owner
 Constraints: public data only; no outreach, ads, payment-provider changes, or private analytics access
 ```
 
-If the only fresh signal is a developer-tool fetch or manifest probe, do not wait for a paid call before asking for the free fit check. Paste the exact latest window and the zero buyer-action boundary, for example `developer_tool_hit=160, agent_crawler_hit=26, x402_probe=56, paid_calls=0, subscriptions=0, third_party_submission=0`.
+If the only fresh signal is a developer-tool fetch or manifest probe, do not wait for a paid call before asking for the free fit check. Paste the exact latest durable totals, the reset-prone current window, and the zero buyer-action boundary, for example `total_reports=3117, ready_reports=2949, current_window: developer_tool_hit=0, agent_crawler_hit=3, x402_probe=8, paid_calls=0, subscriptions=0, third_party_submission=0`.
 
 ## What It Does
 
