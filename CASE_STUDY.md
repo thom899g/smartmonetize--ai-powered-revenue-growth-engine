@@ -13,14 +13,14 @@ This public case study shows how SmartMonetize handles a product with real distr
 
 ## Live Evidence Snapshot
 
-Checked: `2026-06-27T13:27:42Z`.
+Checked: `2026-06-27T15:28:49Z`.
 
-- Verification reports: `total_reports=3099`, `ready=2934`, `close=55`, `needs_work=110`.
-- Discovery counters: `developer_tool_hit=135`, `x402_probe=40`, `agent_crawler_hit=19`, `human_visit=24`.
+- Verification reports: `total_reports=3105`, `ready=2940`, `close=55`, `needs_work=110`.
+- Discovery counters: `developer_tool_hit=160`, `x402_probe=56`, `agent_crawler_hit=26`, `human_visit=116`.
 - Conversion counters: `paid_call=0`, `readiness_subscription_intent=0`, `alert_subscriptions=0`, `third_party_submission=0`.
-- x402 counters: `402_responses=40`, `paid_calls=0`, `settle_attempts=0`, `settle_successes=0`.
+- x402 counters: no separate live x402 aggregate was exposed by `/api/health` during this check; use `x402_probe=56` plus buyer counters until a dedicated x402 aggregate is present again.
 - Ledger boundary: one settled `0.01` USDC proof-of-life row exists, but it is self-funded and not customer revenue.
-- Movement since the prior public snapshot: verification reports increased from `3093` to `3099`, ready reports increased from `2928` to `2934`, and latest-window attention increased across `developer_tool_hit`, `agent_crawler_hit`, `x402_probe`, and `human_visit`. Conversion counters stayed at zero.
+- Movement since the prior public snapshot: verification reports increased from `3099` to `3105`, ready reports increased from `2934` to `2940`, and latest-window attention increased across `developer_tool_hit`, `agent_crawler_hit`, `x402_probe`, and `human_visit`. Conversion counters stayed at zero.
 - Counter hygiene: counter resets or drops are treated as telemetry hygiene until they are tied to buyer action; report growth, probe visibility, and human visits are useful attention signals, not customer revenue.
 
 ## Input Metrics
@@ -31,7 +31,7 @@ The local example file is [`examples/ontario_protocol_metrics.json`](examples/on
 {
   "product": "Ontario Protocol",
   "monthly_visitors": 120,
-  "qualified_clicks": 194,
+  "qualified_clicks": 242,
   "signups": 0,
   "paid_customers": 0,
   "average_price_usd": 49,
