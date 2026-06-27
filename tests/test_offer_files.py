@@ -79,6 +79,14 @@ def test_sample_report_shows_deliverable_and_boundaries():
     assert "MCP_X402_ENDPOINT_AUDIT.md" in readme
     assert "MCP_X402_ENDPOINT_AUDIT.md" in offer
     assert "MCP_X402_ENDPOINT_AUDIT.md" in quickstart
+    assert "FIRST_RESPONSE_MCP_X402_AUDIT_SKELETON.md" in readme
+    assert "FIRST_RESPONSE_MCP_X402_AUDIT_SKELETON.md" in mcp_x402_audit
+    first_response = Path("FIRST_RESPONSE_MCP_X402_AUDIT_SKELETON.md").read_text(
+        encoding="utf-8"
+    )
+    assert "public-data response skeleton" in first_response
+    assert "Only discuss the `$199` MCP/x402 Endpoint Mini-Audit" in first_response
+    assert "No guarantee of listing acceptance" in first_response
     assert "MCP/x402 Endpoint Mini-Audit" in release_notes
     assert "McpX402Audit" in pyproject
     assert "McpX402AuditRequest" in pyproject

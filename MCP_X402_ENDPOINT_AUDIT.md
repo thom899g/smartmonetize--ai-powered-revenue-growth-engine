@@ -93,6 +93,8 @@ Open the dedicated MCP/x402 audit request issue and paste one public signal snap
 
 If you are unsure what to paste, copy the safe public structure in [Example MCP/x402 Audit Request](EXAMPLE_MCP_X402_AUDIT_REQUEST.md).
 
+After a real endpoint-owner issue exists, the first public reply should stay inside the [First Response MCP/x402 Audit Skeleton](FIRST_RESPONSE_MCP_X402_AUDIT_SKELETON.md): public evidence only, one buyer-trust gap, one safe next action, and no payment discussion unless fit is explicit.
+
 This repository does not collect payment automatically. A paid pilot only happens after a real request and an explicitly agreed payment path.
 
 ## Current Public Example
