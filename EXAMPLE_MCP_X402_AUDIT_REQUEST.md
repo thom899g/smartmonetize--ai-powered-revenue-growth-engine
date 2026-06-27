@@ -20,13 +20,13 @@ MCP manifest URL:
 https://example.com/.well-known/mcp.json
 
 Current public market signal:
-durable totals: total_reports=3063, ready_reports=2898
-latest window: x402_probe=8, agent_crawler_hit=3, developer_tool_hit=10, human_visit=2, paid_calls=0
+durable totals: total_reports=3069, ready_reports=2904
+latest window: x402_probe=17, human_visit=36, agent_crawler_hit=5, developer_tool_hit=0, paid_calls=0
 prior window if known: agent_crawler_hit=240, developer_tool_hit=33, x402_probe=64
 repo_stars=1
 
 Where did the attention come from?
-awesome-x402 listing, MCP manifest fetches, public repo activity, and x402 probe counter.
+awesome-x402 listing, public visits, MCP manifest fetches, public repo activity, and x402 probe counter.
 
 Current conversion boundary:
 paid_calls=0
