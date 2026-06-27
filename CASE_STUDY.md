@@ -13,14 +13,14 @@ This public case study shows how SmartMonetize handles a product with real distr
 
 ## Live Evidence Snapshot
 
-Checked: `2026-06-27T05:26:18Z`.
+Checked: `2026-06-27T13:27:42Z`.
 
-- Verification reports: `total_reports=3075`, `ready=2910`, `close=55`, `needs_work=110`.
-- Discovery counters: `developer_tool_hit=4`, `x402_probe=0`, `agent_crawler_hit=0`, `human_visit=0`.
+- Verification reports: `total_reports=3099`, `ready=2934`, `close=55`, `needs_work=110`.
+- Discovery counters: `developer_tool_hit=135`, `x402_probe=40`, `agent_crawler_hit=19`, `human_visit=24`.
 - Conversion counters: `paid_call=0`, `readiness_subscription_intent=0`, `alert_subscriptions=0`, `third_party_submission=0`.
-- x402 counters: `402_responses=0`, `paid_calls=0`, `settle_attempts=0`, `settle_successes=0`.
+- x402 counters: `402_responses=40`, `paid_calls=0`, `settle_attempts=0`, `settle_successes=0`.
 - Ledger boundary: one settled `0.01` USDC proof-of-life row exists, but it is self-funded and not customer revenue.
-- Movement since the prior public snapshot: verification reports increased from `3069` to `3075`, ready reports increased from `2904` to `2910`, and the latest window shows developer-tool attention with `developer_tool_hit=4`. Conversion counters stayed at zero.
+- Movement since the prior public snapshot: verification reports increased from `3093` to `3099`, ready reports increased from `2928` to `2934`, and latest-window attention increased across `developer_tool_hit`, `agent_crawler_hit`, `x402_probe`, and `human_visit`. Conversion counters stayed at zero.
 - Counter hygiene: counter resets or drops are treated as telemetry hygiene until they are tied to buyer action; report growth, probe visibility, and human visits are useful attention signals, not customer revenue.
 
 ## Input Metrics
@@ -31,7 +31,7 @@ The local example file is [`examples/ontario_protocol_metrics.json`](examples/on
 {
   "product": "Ontario Protocol",
   "monthly_visitors": 120,
-  "qualified_clicks": 28,
+  "qualified_clicks": 194,
   "signups": 0,
   "paid_customers": 0,
   "average_price_usd": 49,

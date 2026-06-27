@@ -20,9 +20,9 @@ MCP manifest URL:
 https://example.com/.well-known/mcp.json
 
 Current public market signal:
-durable totals: total_reports=3093, ready_reports=2928
-latest window: developer_tool_hit=124, x402_probe=24, human_visit=11, agent_crawler_hit=11, paid_calls=0
-prior window if known: total_reports=3087, ready_reports=2922, developer_tool_hit=5, x402_probe=8, agent_crawler_hit=3, human_visit=1
+durable totals: total_reports=3099, ready_reports=2934
+latest window: developer_tool_hit=135, x402_probe=40, human_visit=24, agent_crawler_hit=19, paid_calls=0
+prior window if known: total_reports=3093, ready_reports=2928, developer_tool_hit=124, x402_probe=24, agent_crawler_hit=11, human_visit=11
 repo_stars=1
 
 Where did the attention come from?

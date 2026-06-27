@@ -31,7 +31,7 @@ Desired outcome: one buyer-safe next action for an agent, directory, or endpoint
 Constraints: public data only; no outreach, ads, payment-provider changes, or private analytics access
 ```
 
-If the only fresh signal is a developer-tool fetch or manifest probe, do not wait for a paid call before asking for the free fit check. Paste the exact latest window and the zero buyer-action boundary, for example `developer_tool_hit=124, agent_crawler_hit=11, x402_probe=24, paid_calls=0, subscriptions=0, third_party_submission=0`.
+If the only fresh signal is a developer-tool fetch or manifest probe, do not wait for a paid call before asking for the free fit check. Paste the exact latest window and the zero buyer-action boundary, for example `developer_tool_hit=135, agent_crawler_hit=19, x402_probe=40, paid_calls=0, subscriptions=0, third_party_submission=0`.
 
 ## What It Does
 
