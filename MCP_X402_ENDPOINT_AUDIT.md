@@ -22,6 +22,8 @@ If report counts, developer-tool hits, crawler fetches, or x402 probes keep risi
 
 Developer-tool attention is enough for the free fit check when it is public and concrete. If your latest window shows `developer_tool_hit`, `x402_probe`, MCP manifest fetches, or directory crawler activity but still has `paid_calls=0`, open the issue with those counters and ask for the one action that should come before outreach, ads, or a payment-link change.
 
+Benchmark/API visitor attention is also enough for the free fit check when the visited endpoint is public. If people or crawlers are hitting benchmark rows, comparison APIs, report APIs, or paid-endpoint metadata while `paid_calls=0`, submit the visited paths, durable report totals, latest-window events, and the current buyer-action boundary. The first audit question becomes: what public next step should a benchmark reader take before paying, listing, or trusting the endpoint?
+
 If some counters reset while durable totals keep rising, do not treat the reset as lost demand. Submit both views: durable totals such as `total_reports` and `ready_reports`, then the latest-window counters and any prior-window counters that show crawler, probe, or developer-tool attention.
 
 Bad fit:
@@ -68,6 +70,16 @@ MCP manifest:
 Current signal: total_reports=3075, ready_reports=2910, latest_window_developer_tool_hit=4
 Conversion boundary: paid_calls=0, listing submissions=0, subscriptions=0, buyer replies=0
 Desired outcome: one trusted next action for an agent, directory, or endpoint owner
+```
+
+For benchmark/API visitor evidence, include paths instead of private analytics:
+
+```text
+Visited paths: /api/benchmarks/<slug>, /benchmarks/<slug>, /api/benchmarks/compare
+Current signal: human_visit=4, agent_crawler_hit=3, x402_probe=8
+Durable totals: total_reports=3129, ready_reports=2961
+Conversion boundary: paid_calls=0, readiness_subscription_intent=0, alert_subscriptions=0
+Desired outcome: one public next step for a benchmark reader before payment or listing
 ```
 
 The audit starts from that boundary. It does not need private analytics, wallet secrets, admin access, or a live payment link.

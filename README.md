@@ -19,6 +19,8 @@ Good fit: public endpoint, manifest, repo, or landing page with stars, crawler h
 
 Directory `conformance: fail` fast path: if a public directory already lists your MCP/x402 service but labels it as failed, stale, incomplete, or disagrees across indexes, open the fit-check issue with the directory URLs, the manifest URL it crawled, durable totals, the latest reset-prone window, and the zero buyer-action boundary. The first deliverable is a small public fix plan for the endpoint owner, not outreach to the directory.
 
+Benchmark/API visitor fast path: if public benchmark rows, comparison APIs, report APIs, or paid-endpoint metadata are getting human or crawler hits while buyer-action counters remain zero, open the fit-check issue with the visited paths, durable totals, latest-window events, and the zero buyer-action boundary. The first deliverable is the missing public next step for a benchmark reader before payment, listing, or trust.
+
 Fastest request path: open the MCP/x402 audit issue and paste a public counter snapshot like this:
 
 ```text
