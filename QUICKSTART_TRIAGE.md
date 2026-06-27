@@ -58,6 +58,8 @@ For a real public-product pattern, read [`CASE_STUDY.md`](CASE_STUDY.md). It sho
 
 If your product is an MCP, x402, paid API, or agent-callable endpoint, read [`MCP_X402_ENDPOINT_AUDIT.md`](MCP_X402_ENDPOINT_AUDIT.md) before requesting help. That package is more specific than the generic revenue triage audit.
 
+For MCP/x402 endpoints, a developer-tool hit, manifest fetch, x402 probe, directory crawler fetch, or public repo star is enough for the free fit check when paired with the current buyer-action boundary. Use the dedicated [`MCP/x402 Endpoint Mini-Audit Request`](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml), not the generic form, and paste counters such as `developer_tool_hit=4` with `paid_calls=0`.
+
 ## 5. Request A Pilot Audit
 
 If your product has real attention and the triage points to a paid-test gap, open the audit request:

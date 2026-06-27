@@ -18,7 +18,7 @@ Good fit:
 
 Fastest current fit: an endpoint has crawler or directory hits, public x402/MCP metadata, and `paid_calls=0`. The mini-audit starts by finding the smallest public trust or handoff gap between machine discovery and a real buyer action.
 
-If report counts and x402 probes keep rising while `paid_calls`, listing submissions, and subscription intent stay at zero, treat that as a conversion problem: the endpoint is being inspected, but the buyer-safe next action is not obvious enough yet.
+If report counts, developer-tool hits, crawler fetches, or x402 probes keep rising while `paid_calls`, listing submissions, and subscription intent stay at zero, treat that as a conversion problem: the endpoint is being inspected, but the buyer-safe next action is not obvious enough yet.
 
 Developer-tool attention is enough for the free fit check when it is public and concrete. If your latest window shows `developer_tool_hit`, `x402_probe`, MCP manifest fetches, or directory crawler activity but still has `paid_calls=0`, open the issue with those counters and ask for the one action that should come before outreach, ads, or a payment-link change.
 
@@ -65,7 +65,7 @@ If your signal is machine attention with no buyer action yet, paste the smallest
 Endpoint:
 x402 manifest:
 MCP manifest:
-Current signal: total_reports=2990, ready_reports=2826, agent_crawler_hit=3, developer_tool_hit=4, x402_probe=3
+Current signal: total_reports=3075, ready_reports=2910, latest_window_developer_tool_hit=4
 Conversion boundary: paid_calls=0, listing submissions=0, subscriptions=0, buyer replies=0
 Desired outcome: one trusted next action for an agent, directory, or endpoint owner
 ```
