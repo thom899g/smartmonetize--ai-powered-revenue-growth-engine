@@ -12,6 +12,7 @@ If you run a paid API, MCP server, x402 endpoint, or agent-callable tool that ha
 - [Example MCP/x402 audit request](EXAMPLE_MCP_X402_AUDIT_REQUEST.md) - safe public issue shape for endpoint owners with counters but no buyer action.
 - [First-response MCP/x402 audit skeleton](FIRST_RESPONSE_MCP_X402_AUDIT_SKELETON.md) - public-data reply shape after a real endpoint-owner request.
 - [Directory support note draft](DIRECTORY_SUPPORT_NOTE_DRAFT.md) - owner-approved support-note shape for mixed `pass`/`fail` directory rows.
+- [MCP/x402 probe handoff draft](MCP_PROBE_HANDOFF_DRAFT.md) - public-data handoff for developer-tool, crawler, or x402 probe attention with zero buyer action.
 - [MCP/x402 Endpoint Mini-Audit Request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml) - open a free public fit-check issue with one endpoint and one real signal; no payment path is created until fit is explicit.
 - [Ontario Protocol case study](CASE_STUDY.md) - live example with crawler/developer attention, payment-aware surfaces, and no counted customer revenue yet.
 
@@ -139,6 +140,7 @@ Before opening an issue, inspect the sample deliverable:
 - [Example MCP/x402 audit request](EXAMPLE_MCP_X402_AUDIT_REQUEST.md)
 - [First-response MCP/x402 audit skeleton](FIRST_RESPONSE_MCP_X402_AUDIT_SKELETON.md)
 - [Directory support note draft](DIRECTORY_SUPPORT_NOTE_DRAFT.md)
+- [MCP/x402 probe handoff draft](MCP_PROBE_HANDOFF_DRAFT.md)
 - [5-minute self-service triage](QUICKSTART_TRIAGE.md)
 - [Pilot offer and scope](OFFER.md)
 - [MCP/x402 audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml)

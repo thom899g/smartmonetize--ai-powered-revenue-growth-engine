@@ -107,6 +107,8 @@ If you are unsure what to paste, copy the safe public structure in [Example MCP/
 
 After a real endpoint-owner issue exists, the first public reply should stay inside the [First Response MCP/x402 Audit Skeleton](FIRST_RESPONSE_MCP_X402_AUDIT_SKELETON.md): public evidence only, one buyer-trust gap, one safe next action, and no payment discussion unless fit is explicit.
 
+If the only current signal is machine inspection, use the [MCP/x402 probe handoff draft](MCP_PROBE_HANDOFF_DRAFT.md) first. It keeps the response bounded to public counters, the zero buyer-action boundary, and one readiness note before any outreach, listing submission, deployment, or payment-path change.
+
 This repository does not collect payment automatically. A paid pilot only happens after a real request and an explicitly agreed payment path.
 
 ## Current Public Example
