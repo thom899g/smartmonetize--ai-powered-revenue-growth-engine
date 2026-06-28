@@ -9,6 +9,8 @@ body:
         Use this form when a public MCP, x402 endpoint, paid API, or agent-callable tool has discovery attention but no buyer action yet. This is a free public fit check first. Do not include passwords, API keys, wallet secrets, payment details, private customer data, confidential business data, or private admin URLs.
 
         If your only signal is a developer-tool hit, MCP manifest fetch, x402 probe, or directory crawler fetch, that is enough to ask for the free fit check as long as you also paste the current buyer-action boundary such as `paid_calls=0`.
+
+        If a directory shows mixed rows, such as one result saying `conformance: pass` and another saying `conformance: fail`, paste both public rows. The first deliverable is a small owner-side metadata fix plan, not outreach to the directory.
   - type: input
     id: product
     attributes:
@@ -55,6 +57,22 @@ body:
       label: Where did the attention come from?
       description: "Public source only: directory, repo, crawler logs, search console aggregate, API counter, or listing URL."
       placeholder: "Example: awesome-x402 listing, MCP directory fetches, public repo traffic, x402 probe counter, or crawler user-agent aggregate."
+    validations:
+      required: false
+  - type: textarea
+    id: directory_rows
+    attributes:
+      label: Directory or listing rows
+      description: Optional. Paste public directory rows when listings disagree, are stale, or show pass/fail mismatch.
+      placeholder: "Example: MCP search row says conformance: pass at <URL>; older x402 service row says conformance: fail at <URL>; manifest crawled: https://example.com/.well-known/x402.json."
+    validations:
+      required: false
+  - type: textarea
+    id: prior_snapshot
+    attributes:
+      label: Prior snapshot for comparison
+      description: Optional. Include the last public snapshot if the signal is a delta, especially durable report totals versus reset-prone counters.
+      placeholder: "Example: prior total_reports=3129, ready_reports=2961; current total_reports=3156, ready_reports=2988; buyer-action counters stayed zero."
     validations:
       required: false
   - type: textarea
