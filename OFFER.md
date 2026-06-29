@@ -56,6 +56,8 @@ Use public or anonymized numbers:
 
 Open a GitHub issue using the `Revenue Triage Audit Request` template.
 
+If you arrived by starring or bookmarking the repo, the next concrete signal is still an issue with one public URL and one real counter, listing, search, demo, or repo-attention datapoint. Use the MCP/x402 form for endpoints and the general triage form for other products.
+
 This repository does not collect payment automatically. A paid pilot only happens after a real request and an explicitly agreed payment path.
 
 ## Related Pilot Package
