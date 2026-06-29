@@ -20,9 +20,9 @@ MCP manifest URL:
 https://example.com/.well-known/mcp.json
 
 Current public market signal:
-durable totals: total_reports=3222, ready_reports=3051
-latest window: developer_tool_hit=7, x402_probe=33, human_visit=58, agent_crawler_hit=19, paid_calls=0
-prior window if known: total_reports=3216, ready_reports=3045, developer_tool_hit=4, x402_probe=16, agent_crawler_hit=6, human_visit=35
+durable totals: total_reports=3228, ready_reports=3057
+latest window: developer_tool_hit=35, x402_probe=49, human_visit=70, agent_crawler_hit=32, paid_calls=0
+prior window if known: total_reports=3222, ready_reports=3051, developer_tool_hit=7, x402_probe=33, agent_crawler_hit=19, human_visit=58
 repo_stars=1
 
 Where did the attention come from?
@@ -42,7 +42,7 @@ third_party_submission=0
 buyer replies=0
 
 Desired outcome:
-One buyer-safe next action that can turn machine discovery into an endpoint-owner inquiry, live agent-buyer guide, paid call, or readiness proof.
+One buyer-safe next action that can turn machine discovery into an endpoint-owner inquiry, live agent-buyer guide fix, paid call, subscription intent, or readiness proof.
 
 Constraints:
 Public data only. No outreach, ads, payment-provider changes, private analytics, or admin access.
