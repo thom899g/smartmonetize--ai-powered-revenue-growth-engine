@@ -2,6 +2,7 @@
 
 ## Agent/MCP trust-boundary package
 
+- Fast inbound path for cloners: [issue #1](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/1) now accepts public/non-sensitive fit-check requests from anyone with attention but no paid conversion.
 - Adds the Agent/MCP Trust Boundary Audit for agent frameworks, MCP servers, browser agents, memory systems, and agent-callable tools.
 - Adds a public issue form for free fit checks before any `$299` paid pilot discussion.
 - Links the package from the README, offer, and issue-template contact links.

@@ -2,6 +2,8 @@
 
 If you cloned this repo because your product has attention but no paid conversion, this is the fastest path.
 
+Fastest path: reply in [issue #1](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/1) with public/non-sensitive evidence. That turns an anonymous clone into a visible fit-check request.
+
 ## 1. Run The Local Triage
 
 ```bash
@@ -42,6 +44,7 @@ Not enough by itself:
 
 ## 3. Pick The Right Request
 
+- [Cloned SmartMonetize? Request a free public fit check here](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/1) for the fastest public reply path.
 - [Agent/MCP Trust Boundary Audit request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=agent_mcp_trust_boundary_audit.yml) for agent frameworks, MCP servers, browser agents, memory systems, and agent-callable tools.
 - [MCP/x402 Endpoint Mini-Audit request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml) for MCP/x402 endpoints, paid APIs, and agent-commerce surfaces.
 - [General Revenue Triage Audit request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml) for small products with traffic, signups, demos, or search attention but no clear paid conversion.

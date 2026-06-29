@@ -8,6 +8,8 @@ SmartMonetize is a lightweight audit tool that turns a few product metrics into 
 
 Start with [After Cloning SmartMonetize](AFTER_CLONING.md). It shows the fastest path from local triage to a public fit-check issue without sharing private data.
 
+Fastest public signal path: if you cloned this because your product has attention but no paid conversion, reply in [issue #1](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/1) with one public URL, one real signal, the conversion boundary, and whether a `$49`, `$199`, or `$299` pilot could fit.
+
 ## Found This From `x402-service`, `mcp-server`, Or `agent-commerce`?
 
 If you run a paid API, MCP server, x402 endpoint, or agent-callable tool that has attention but no paid usage, start here:
