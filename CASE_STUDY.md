@@ -13,14 +13,14 @@ This public case study shows how SmartMonetize handles a product with real distr
 
 ## Live Evidence Snapshot
 
-Checked: `2026-06-29T15:15:07Z`.
+Checked: `2026-06-29T16:26:29Z`.
 
-- Verification reports: `total_reports=3252`, `ready=3081`, `close=61`, `needs_work=110`.
-- Discovery counters: `developer_tool_hit=40`, `agent_crawler_hit=3`, `x402_probe=11`, `human_visit=0`.
+- Verification reports: `total_reports=3255`, `ready=3084`, `close=61`, `needs_work=110`.
+- Discovery counters: `developer_tool_hit=2`, `agent_crawler_hit=9`, `x402_probe=2`, `human_visit=4`.
 - Conversion counters: `paid_call=0`, `readiness_subscription_intent=0`, `alert_subscriptions=0`, `third_party_submission=0`.
-- x402 counters: `402_responses=11`, `paid_calls=0`, `settle_successes=0`.
+- x402 counters: `402_responses=2`, `paid_calls=0`, `settle_successes=0`.
 - Ledger boundary: one settled `0.01` USDC proof-of-life row exists, but it is self-funded and not customer revenue.
-- Movement since the prior public snapshot: verification reports increased from `3248` to `3252`, ready reports increased from `3077` to `3081`, developer-tool hits increased from `11` to `40`, and x402 probes/HTTP 402 responses increased from `0` to `11`. Conversion counters stayed at zero.
+- Movement since the prior public snapshot: verification reports increased from `3252` to `3255`, ready reports increased from `3081` to `3084`, agent-crawler hits increased from `3` to `9`, and human visits increased from `0` to `4`. Developer-tool hits, x402 probes, and HTTP 402 responses are lower than the earlier same-day window, which is treated as reset-prone telemetry rather than buyer rejection. Conversion counters stayed at zero.
 - Directory state: the live agent-buyer guide, MCP manifest, x402 manifest, and 402 payment challenge are reachable.
 - Counter hygiene: one `x402_probe` in this snapshot came from an internal verification curl, so the safest interpretation is not "buyer demand proved." The valid public signal is that developer/tool attention is present while buyer-action counters are still zero.
 
@@ -31,8 +31,8 @@ The local example file is [`examples/ontario_protocol_metrics.json`](examples/on
 ```json
 {
   "product": "Ontario Protocol",
-  "monthly_visitors": 120,
-  "qualified_clicks": 54,
+  "monthly_visitors": 17,
+  "qualified_clicks": 13,
   "signups": 0,
   "paid_customers": 0,
   "average_price_usd": 49,
@@ -52,10 +52,10 @@ The `qualified_clicks` value is a proxy for public machine attention in the curr
 The strongest current Ontario signal is not a star, a report, or a dashboard. It is this boundary:
 
 ```text
-developer_tool_hit=40
-agent_crawler_hit=3
-x402_probe=11
-402_responses=11
+developer_tool_hit=2
+agent_crawler_hit=9
+x402_probe=2
+402_responses=2
 paid_calls=0
 settle_successes=0
 ```

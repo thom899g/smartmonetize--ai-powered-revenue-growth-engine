@@ -2,6 +2,7 @@
 
 ## Agent/MCP trust-boundary package
 
+- Refresh: `2026-06-29T16:26:29Z` public evidence now shows `total_reports=3255`, `ready=3084`, `developer_tool_hit=2`, `agent_crawler_hit=9`, `x402_probe=2`, `human_visit=4`, `402_responses=2`, and `paid_calls=0`; lower reset-prone counters are called out as telemetry hygiene, not buyer rejection.
 - Refresh: `2026-06-29T15:15:07Z` public evidence now shows `total_reports=3252`, `ready=3081`, `developer_tool_hit=40`, `agent_crawler_hit=3`, `x402_probe=11`, `402_responses=11`, and `paid_calls=0`.
 - Tightens the Ontario case study around the current probe-to-payment boundary: payment-aware clients can reach HTTP 402, but no customer paid call has happened yet.
 - Keeps the self-funded 0.01 USDC proof separate from customer revenue.

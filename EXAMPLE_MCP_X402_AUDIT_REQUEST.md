@@ -20,9 +20,9 @@ MCP manifest URL:
 https://example.com/.well-known/mcp.json
 
 Current public market signal:
-durable totals: total_reports=3248, ready_reports=3077
-latest window: developer_tool_hit=11, agent_crawler_hit=3, x402_probe=0, human_visit=0, paid_calls=0
-prior window if known: total_reports=3240, ready_reports=3069, developer_tool_hit=3, x402_probe=0, agent_crawler_hit=1, human_visit=0
+durable totals: total_reports=3255, ready_reports=3084
+latest window: developer_tool_hit=2, agent_crawler_hit=9, x402_probe=2, human_visit=4, paid_calls=0
+prior window if known: total_reports=3252, ready_reports=3081, developer_tool_hit=40, x402_probe=11, agent_crawler_hit=3, human_visit=0
 repo_stars=1
 
 Where did the attention come from?
@@ -55,7 +55,7 @@ Maybe, show me the free public fit check first.
 
 The audit starts from the boundary between attention and buyer action. It needs one public endpoint, one public signal snapshot, and one conversion gap.
 
-Separate durable totals from counters that may reset between deploys, days, or storage restores. For example, growing report totals plus a smaller latest-window `x402_probe` or `developer_tool_hit` count is valid attention for a free fit check, but reset-prone drops are not negative buyer evidence by themselves.
+Separate durable totals from counters that may reset between deploys, days, or storage restores. For example, growing report totals plus a smaller latest-window `x402_probe`, `developer_tool_hit`, or `402_responses` count is valid attention for a free fit check, but reset-prone drops are not negative buyer evidence by themselves.
 
 The most useful signals are concrete counts or public URLs:
 
