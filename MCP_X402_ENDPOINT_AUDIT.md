@@ -11,6 +11,7 @@ Builders with a public MCP, paid API, x402 service, or agent-callable endpoint t
 Good fit:
 
 - agent/tool directory listing exists but has missing metadata
+- public directory row exists but says `conformance: fail`, stale, incomplete, or disagrees with reachable manifests
 - MCP endpoint is callable but buyers do not know what it costs
 - x402 manifest exists but chain, currency, payee, or facilitator fields are unclear
 - public crawler or developer traffic exists but no owner inquiry or paid call follows
@@ -18,7 +19,7 @@ Good fit:
 
 Fastest current fit: an endpoint has crawler or directory hits, public x402/MCP metadata, and `paid_calls=0`. The mini-audit starts by finding the smallest public trust or handoff gap between machine discovery and a real buyer action.
 
-If report counts, developer-tool hits, crawler fetches, or x402 probes keep rising while `paid_calls`, listing submissions, and subscription intent stay at zero, treat that as a conversion problem: the endpoint is being inspected, but the buyer-safe next action is not obvious enough yet.
+If report counts, developer-tool hits, crawler fetches, directory rows, or x402 probes keep rising while `paid_calls`, listing submissions, and subscription intent stay at zero, treat that as a conversion problem: the endpoint is being inspected, but the buyer-safe next action is not obvious enough yet.
 
 Developer-tool attention is enough for the free fit check when it is public and concrete. If your latest window shows `developer_tool_hit`, `x402_probe`, MCP manifest fetches, or directory crawler activity but still has `paid_calls=0`, open the issue with those counters and ask for the one action that should come before outreach, ads, or a payment-link change.
 

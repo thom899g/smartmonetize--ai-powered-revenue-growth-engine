@@ -19,7 +19,7 @@ If you run a paid API, MCP server, x402 endpoint, or agent-callable tool that ha
 
 Good fit: public endpoint, manifest, repo, or landing page with stars, crawler hits, search impressions, demo usage, or directory attention but no clear buyer action. For MCP/x402 endpoints, include durable totals separately from reset-prone counters: for example `total_reports`, `ready_reports`, current-window `x402_probe`, `agent_crawler_hit`, `developer_tool_hit`, and `paid_calls=0`. Do not include passwords, API keys, private customer data, payment details, or confidential business data.
 
-Directory `conformance: fail` fast path: if a public directory already lists your MCP/x402 service but labels it as failed, stale, incomplete, or disagrees across indexes, open the fit-check issue with the directory URLs, the manifest URL it crawled, durable totals, the latest reset-prone window, and the zero buyer-action boundary. The first deliverable is a small public fix plan for the endpoint owner, not outreach to the directory.
+Directory `conformance: fail` fast path: if a public directory already lists your MCP/x402 service but labels it as failed, stale, incomplete, or disagrees across indexes, open the fit-check issue with the directory URLs, the manifest URL it crawled, durable totals, the latest reset-prone window, and the zero buyer-action boundary. Include any slow or unavailable public buyer/readiness URL separately from reachable manifests. The first deliverable is a small public fix plan for the endpoint owner, not outreach to the directory.
 
 Benchmark/API visitor fast path: if public benchmark rows, comparison APIs, report APIs, or paid-endpoint metadata are getting human or crawler hits while buyer-action counters remain zero, open the fit-check issue with the visited paths, durable totals, latest-window events, and the zero buyer-action boundary. The first deliverable is the missing public next step for a benchmark reader before payment, listing, or trust.
 
@@ -36,7 +36,7 @@ Desired outcome: one buyer-safe next action for an agent, directory, or endpoint
 Constraints: public data only; no outreach, ads, payment-provider changes, or private analytics access
 ```
 
-If the only fresh signal is a developer-tool fetch or manifest probe, do not wait for a paid call before asking for the free fit check. Paste the exact latest durable totals, the reset-prone current window, and the zero buyer-action boundary, for example `total_reports=3234, ready_reports=3063, current_window: developer_tool_hit=1, agent_crawler_hit=0, x402_probe=8, paid_calls=0, subscriptions=0, third_party_submission=0`. If yesterday's window was larger, include it separately as prior context instead of treating the reset as buyer rejection.
+If the only fresh signal is a developer-tool fetch, crawler fetch, directory row, or manifest probe, do not wait for a paid call before asking for the free fit check. Paste the exact latest durable totals, the reset-prone current window, and the zero buyer-action boundary, for example `total_reports=3240, ready_reports=3069, current_window: developer_tool_hit=3, agent_crawler_hit=1, x402_probe=0, paid_calls=0, subscriptions=0, third_party_submission=0`. If yesterday's window was larger, include it separately as prior context instead of treating the reset as buyer rejection.
 
 ## What It Does
 
