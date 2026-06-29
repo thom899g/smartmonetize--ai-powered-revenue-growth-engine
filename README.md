@@ -6,6 +6,8 @@ SmartMonetize is a lightweight audit tool that turns a few product metrics into 
 
 ## Cloned This Repo?
 
+Want the shortest path? Open [Start Here](START_HERE.md).
+
 Start with [After Cloning SmartMonetize](AFTER_CLONING.md). It shows the fastest path from local triage to a public fit-check request without sharing private data.
 
 Fastest public signal path: if you cloned this because your product has attention but no paid conversion, open the matching request form with one public URL, one real signal, the conversion boundary, and whether a `$49`, `$199`, or `$299` pilot could fit:

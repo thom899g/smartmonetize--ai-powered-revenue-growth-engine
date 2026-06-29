@@ -2,6 +2,8 @@
 
 If you cloned this repo because your product has attention but no paid conversion, this is the fastest path.
 
+Shortest version: [Start Here](START_HERE.md).
+
 Fastest path: open the matching request form with public/non-sensitive evidence. That turns an anonymous clone into a visible fit-check request:
 
 - [General revenue triage request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml)
