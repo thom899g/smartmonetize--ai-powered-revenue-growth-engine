@@ -51,6 +51,7 @@ def test_sample_report_shows_deliverable_and_boundaries():
     pyproject = Path("pyproject.toml").read_text(encoding="utf-8")
     release_notes = Path("RELEASE_NOTES.md").read_text(encoding="utf-8")
     quickstart = Path("QUICKSTART_TRIAGE.md").read_text(encoding="utf-8")
+    after_cloning = Path("AFTER_CLONING.md").read_text(encoding="utf-8")
     case_study = Path("CASE_STUDY.md").read_text(encoding="utf-8")
     mcp_x402_audit = Path("MCP_X402_ENDPOINT_AUDIT.md").read_text(
         encoding="utf-8"
@@ -68,6 +69,7 @@ def test_sample_report_shows_deliverable_and_boundaries():
     assert "does not send messages" in sample
     assert "SAMPLE_REPORT.md" in readme
     assert "QUICKSTART_TRIAGE.md" in readme
+    assert "AFTER_CLONING.md" in readme
     assert "Found This From `x402-service`, `mcp-server`, Or `agent-commerce`?" in readme
     assert "Revenue Triage Audit Request" in readme
     assert "MCP/x402 Endpoint Mini-Audit Request" in readme
@@ -103,6 +105,11 @@ def test_sample_report_shows_deliverable_and_boundaries():
     assert "Only discuss the `$199` MCP/x402 Endpoint Mini-Audit" in first_response
     assert "No guarantee of listing acceptance" in first_response
     assert "MCP/x402 Endpoint Mini-Audit" in release_notes
+    assert "after-cloning guide" in release_notes
+    assert "After Cloning SmartMonetize" in after_cloning
+    assert "free public fit check" in after_cloning
+    assert "No revenue is promised or guaranteed" in after_cloning
+    assert "agent_mcp_trust_boundary_audit.yml" in after_cloning
     assert "Agent/MCP Trust Boundary Audit" in release_notes
     assert "$299" in trust_boundary_audit
     assert "trust-boundary map" in trust_boundary_audit

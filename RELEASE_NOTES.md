@@ -5,6 +5,7 @@
 - Adds the Agent/MCP Trust Boundary Audit for agent frameworks, MCP servers, browser agents, memory systems, and agent-callable tools.
 - Adds a public issue form for free fit checks before any `$299` paid pilot discussion.
 - Links the package from the README, offer, and issue-template contact links.
+- Adds an after-cloning guide so repo cloners have a direct path from local triage to a public fit-check issue.
 
 Boundary: this is an owned public offer surface. It is not outreach, account creation, payment collection, or customer revenue.
 

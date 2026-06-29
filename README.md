@@ -4,6 +4,10 @@ Revenue triage for small web products.
 
 SmartMonetize is a lightweight audit tool that turns a few product metrics into a ranked monetization plan. It is intentionally deterministic: no fake "autonomous revenue" claims, no hidden scraping, no account creation, no spam, and no payment changes. It helps a founder decide the next revenue move from evidence.
 
+## Cloned This Repo?
+
+Start with [After Cloning SmartMonetize](AFTER_CLONING.md). It shows the fastest path from local triage to a public fit-check issue without sharing private data.
+
 ## Found This From `x402-service`, `mcp-server`, Or `agent-commerce`?
 
 If you run a paid API, MCP server, x402 endpoint, or agent-callable tool that has attention but no paid usage, start here:
@@ -145,6 +149,7 @@ Before opening an issue, inspect the sample deliverable:
 - [Directory support note draft](DIRECTORY_SUPPORT_NOTE_DRAFT.md)
 - [MCP/x402 probe handoff draft](MCP_PROBE_HANDOFF_DRAFT.md)
 - [5-minute self-service triage](QUICKSTART_TRIAGE.md)
+- [After cloning guide](AFTER_CLONING.md)
 - [Pilot offer and scope](OFFER.md)
 - [MCP/x402 audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml)
 - [Agent/MCP Trust Boundary Audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=agent_mcp_trust_boundary_audit.yml)
