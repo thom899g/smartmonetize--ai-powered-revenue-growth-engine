@@ -51,7 +51,7 @@ Desired outcome: one buyer-safe next action for an agent, directory, or endpoint
 Constraints: public data only; no outreach, ads, payment-provider changes, or private analytics access
 ```
 
-If the only fresh signal is a developer-tool fetch, crawler fetch, directory row, or manifest probe, do not wait for a paid call before asking for the free fit check. Paste the exact latest durable totals, the reset-prone current window, and the zero buyer-action boundary, for example `total_reports=3255, ready_reports=3084, current_window: developer_tool_hit=2, agent_crawler_hit=9, x402_probe=2, human_visit=4, paid_calls=0, subscriptions=0, third_party_submission=0`. If an earlier same-day window was larger, include it separately as prior context instead of treating the reset as buyer rejection.
+If the only fresh signal is a developer-tool fetch, crawler fetch, directory row, or manifest probe, do not wait for a paid call before asking for the free fit check. Paste the exact latest durable totals, the reset-prone current window, and the zero buyer-action boundary, for example `total_reports=3261, ready_reports=3090, current_window: developer_tool_hit=13, agent_crawler_hit=6, x402_probe=24, human_visit=10, paid_calls=0, subscriptions=0, third_party_submission=0`. If an earlier same-day window was larger, include it separately as prior context instead of treating the reset as buyer rejection.
 
 ## What It Does
 

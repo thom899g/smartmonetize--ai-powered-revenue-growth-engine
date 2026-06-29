@@ -13,14 +13,14 @@ This public case study shows how SmartMonetize handles a product with real distr
 
 ## Live Evidence Snapshot
 
-Checked: `2026-06-29T16:26:29Z`.
+Checked: `2026-06-29T18:25:59Z`.
 
-- Verification reports: `total_reports=3255`, `ready=3084`, `close=61`, `needs_work=110`.
-- Discovery counters: `developer_tool_hit=2`, `agent_crawler_hit=9`, `x402_probe=2`, `human_visit=4`.
+- Verification reports: `total_reports=3261`, `ready=3090`, `close=61`, `needs_work=110`.
+- Discovery counters: `developer_tool_hit=13`, `agent_crawler_hit=6`, `x402_probe=24`, `human_visit=10`.
 - Conversion counters: `paid_call=0`, `readiness_subscription_intent=0`, `alert_subscriptions=0`, `third_party_submission=0`.
-- x402 counters: `402_responses=2`, `paid_calls=0`, `settle_successes=0`.
+- x402 counters: `402_responses=24`, `paid_calls=0`, `settle_successes=0`.
 - Ledger boundary: one settled `0.01` USDC proof-of-life row exists, but it is self-funded and not customer revenue.
-- Movement since the prior public snapshot: verification reports increased from `3252` to `3255`, ready reports increased from `3081` to `3084`, agent-crawler hits increased from `3` to `9`, and human visits increased from `0` to `4`. Developer-tool hits, x402 probes, and HTTP 402 responses are lower than the earlier same-day window, which is treated as reset-prone telemetry rather than buyer rejection. Conversion counters stayed at zero.
+- Movement since the prior public snapshot: verification reports increased from `3255` to `3261`, ready reports increased from `3084` to `3090`, developer-tool hits increased from `2` to `13`, x402 probes increased from `2` to `24`, HTTP 402 responses increased from `2` to `24`, and human visits increased from `4` to `10`. Agent-crawler hits moved from `9` to `6`, which is treated as reset-prone telemetry rather than buyer rejection. Conversion counters stayed at zero.
 - Directory state: the live agent-buyer guide, MCP manifest, x402 manifest, and 402 payment challenge are reachable.
 - Counter hygiene: one `x402_probe` in this snapshot came from an internal verification curl, so the safest interpretation is not "buyer demand proved." The valid public signal is that developer/tool attention is present while buyer-action counters are still zero.
 
@@ -31,8 +31,8 @@ The local example file is [`examples/ontario_protocol_metrics.json`](examples/on
 ```json
 {
   "product": "Ontario Protocol",
-  "monthly_visitors": 17,
-  "qualified_clicks": 13,
+  "monthly_visitors": 53,
+  "qualified_clicks": 43,
   "signups": 0,
   "paid_customers": 0,
   "average_price_usd": 49,
@@ -45,17 +45,17 @@ The local example file is [`examples/ontario_protocol_metrics.json`](examples/on
 
 These are intentionally conservative rough numbers. They are not private analytics exports.
 
-The `qualified_clicks` value is a proxy for public machine attention in the current run: `x402_probe + agent_crawler_hit + developer_tool_hit`. Human visits are tracked separately because they are attention, but not enough by themselves to prove buyer intent. Treat counter resets or decreases as telemetry hygiene issues, not customer revenue or lost revenue. Verification calls can contaminate probe counters, so SmartMonetize keeps the zero-revenue boundary visible instead of pretending every probe is a buyer.
+The `qualified_clicks` value is a proxy for public machine attention in the current run: `x402_probe + agent_crawler_hit + developer_tool_hit`. The `monthly_visitors` value is a conservative current-window attention proxy: machine attention plus human visits. Treat counter resets or decreases as telemetry hygiene issues, not customer revenue or lost revenue. Verification calls can contaminate probe counters, so SmartMonetize keeps the zero-revenue boundary visible instead of pretending every probe is a buyer.
 
 ## Current Probe-To-Payment Gap
 
 The strongest current Ontario signal is not a star, a report, or a dashboard. It is this boundary:
 
 ```text
-developer_tool_hit=2
-agent_crawler_hit=9
-x402_probe=2
-402_responses=2
+developer_tool_hit=13
+agent_crawler_hit=6
+x402_probe=24
+402_responses=24
 paid_calls=0
 settle_successes=0
 ```
