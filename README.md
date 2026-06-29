@@ -10,6 +10,8 @@ Want the shortest path? Open [Start Here](START_HERE.md).
 
 Start with [After Cloning SmartMonetize](AFTER_CLONING.md). It shows the fastest path from local triage to a public fit-check request without sharing private data.
 
+Prefer one downloadable packet? Use the [`v0.1.4` fit-check packet](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/releases/download/v0.1.4/smartmonetize-fit-check-packet-v0.1.4.zip). It includes `START_HERE.md`, sample reports, the offer docs, and the MCP/x402 and Agent/MCP trust-boundary audit templates.
+
 Fastest public signal path: if you cloned this because your product has attention but no paid conversion, open the matching request form with one public URL, one real signal, the conversion boundary, and whether a `$49`, `$199`, or `$299` pilot could fit:
 
 - [General revenue triage request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml) for web products, SaaS, demos, search traffic, or signup funnels.
