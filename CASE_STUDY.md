@@ -13,15 +13,15 @@ This public case study shows how SmartMonetize handles a product with real distr
 
 ## Live Evidence Snapshot
 
-Checked: `2026-06-27T15:28:49Z`.
+Checked: `2026-06-29T13:59:00Z`.
 
-- Verification reports: `total_reports=3105`, `ready=2940`, `close=55`, `needs_work=110`.
-- Discovery counters: `developer_tool_hit=160`, `x402_probe=56`, `agent_crawler_hit=26`, `human_visit=116`.
+- Verification reports: `total_reports=3243`, `ready=3072`, `close=61`, `needs_work=110`.
+- Discovery counters: `developer_tool_hit=15`, `x402_probe=3`, `agent_crawler_hit=0`, `human_visit=0`.
 - Conversion counters: `paid_call=0`, `readiness_subscription_intent=0`, `alert_subscriptions=0`, `third_party_submission=0`.
-- x402 counters: no separate live x402 aggregate was exposed by `/api/health` during this check; use `x402_probe=56` plus buyer counters until a dedicated x402 aggregate is present again.
+- x402 counters: `402_responses=3`, `paid_calls=0`, `settle_successes=0`.
 - Ledger boundary: one settled `0.01` USDC proof-of-life row exists, but it is self-funded and not customer revenue.
-- Movement since the prior public snapshot: verification reports increased from `3099` to `3105`, ready reports increased from `2934` to `2940`, and latest-window attention increased across `developer_tool_hit`, `agent_crawler_hit`, `x402_probe`, and `human_visit`. Conversion counters stayed at zero.
-- Counter hygiene: counter resets or drops are treated as telemetry hygiene until they are tied to buyer action; report growth, probe visibility, and human visits are useful attention signals, not customer revenue.
+- Movement since the prior public snapshot: verification reports increased from `3105` to `3243`, ready reports increased from `2940` to `3072`, and the current window now includes x402 probes plus HTTP 402 responses. Conversion counters stayed at zero.
+- Counter hygiene: counter resets or drops are treated as telemetry hygiene until they are tied to buyer action; report growth, probe visibility, and developer-tool hits are useful attention signals, not customer revenue.
 
 ## Input Metrics
 
@@ -45,6 +45,39 @@ The local example file is [`examples/ontario_protocol_metrics.json`](examples/on
 These are intentionally conservative rough numbers. They are not private analytics exports.
 
 The `qualified_clicks` value is a proxy for public machine attention in the current run: `x402_probe + agent_crawler_hit + developer_tool_hit`. Human visits are tracked separately because they are attention, but not enough by themselves to prove buyer intent. Treat counter resets or decreases as telemetry hygiene issues, not customer revenue or lost revenue.
+
+## Current Probe-To-Payment Gap
+
+The strongest current Ontario signal is not a star, a report, or a dashboard. It is this boundary:
+
+```text
+x402_probe=3
+402_responses=3
+paid_calls=0
+settle_successes=0
+```
+
+That means payment-aware clients are reaching the paid boundary, but none have completed payment. The SmartMonetize diagnosis is:
+
+```text
+Discovery works enough to trigger probes.
+The next revenue question is why probe does not become payment.
+```
+
+The immediate mini-audit focus should be the probe-to-payment bridge:
+
+1. Is the 402 challenge easy for an agent to parse?
+2. Does the manifest make price, network, asset, facilitator, and purpose obvious?
+3. Is there a free can-pay or readiness preflight before spend?
+4. Does the response explain what evidence the paid call returns?
+5. Is the cheapest paid action clearly low-risk enough to try?
+
+For Ontario, the owned public fix was to expose an agent-buyer guide and release it publicly:
+
+- Agent buyer guide: `https://ontarioprotocol.com/.well-known/agent-buyer.json`
+- Lowest-friction paid path: `GET /api/x402/reputation/<agent_id>` at `0.001 USDC`
+- Endpoint-owner path: `POST /api/x402/list-service` at `0.50 USDC`
+- Public release: `https://github.com/thom899g/ontarioprotocol/releases/tag/v0.1.1`
 
 ## Run It
 

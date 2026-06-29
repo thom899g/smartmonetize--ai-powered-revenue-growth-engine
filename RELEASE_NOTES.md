@@ -1,3 +1,14 @@
+# SmartMonetize v0.1.3
+
+## Probe-to-payment diagnostic
+
+- Refreshes the Ontario Protocol case study with live probe evidence: `x402_probe=3`, `402_responses=3`, `paid_calls=0`.
+- Adds an explicit probe-to-payment gap section.
+- Tightens the MCP/x402 mini-audit package around the moment where payment-aware clients reach HTTP 402 but do not complete payment.
+- Extends the probe handoff draft with `http_402_responses`, `settle_successes`, and cheapest-paid-probe guidance.
+
+Boundary: this release is external distribution and package clarity. It is not customer revenue.
+
 # SmartMonetize v0.1.2
 
 MCP/x402 endpoint-owner package release.

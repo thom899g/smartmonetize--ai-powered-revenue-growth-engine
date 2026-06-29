@@ -9,6 +9,7 @@ This is not outreach. It is a public-data handoff shape an endpoint owner can pu
 Good trigger:
 
 - `developer_tool_hit`, `agent_crawler_hit`, MCP manifest fetches, or `x402_probe` increased
+- HTTP `402` responses increased while paid calls stayed at zero
 - durable product totals increased or stayed healthy
 - `paid_calls=0`
 - `readiness_subscription_intent=0`
@@ -35,6 +36,9 @@ Developer tools, crawlers, or x402 probes inspected the endpoint, but no paid ca
 Current interpretation:
 The endpoint is discoverable enough to be inspected. The next buyer-safe action is still unclear.
 
+Probe-to-payment interpretation:
+If `x402_probe` or HTTP `402` responses increased but `paid_calls=0`, payment-aware clients reached the paid boundary and stopped. The handoff should make the cheapest paid action, free preflight, quote/audit evidence, and stop conditions obvious.
+
 Recommended public next step:
 Publish or attach one short readiness note that answers:
 
@@ -43,6 +47,7 @@ Publish or attach one short readiness note that answers:
 3. What happens before a mutating or paid action runs?
 4. What receipt or response proves the call completed?
 5. What should a directory, buyer, or endpoint owner do next?
+6. What is the cheapest safe paid probe, and what does it return?
 
 Boundary:
 Public evidence only. No private analytics, secrets, wallet keys, outreach, payment-link changes, legal/security certification, or guaranteed listing/revenue claim.
@@ -57,9 +62,9 @@ Endpoint:
 MCP manifest:
 x402 manifest:
 Latest durable totals: total_reports=<n>, ready_reports=<n>
-Latest probe window: developer_tool_hit=<n>, agent_crawler_hit=<n>, x402_probe=<n>
-Buyer-action boundary: paid_calls=0, readiness_subscription_intent=0, alert_subscriptions=0, third_party_submission=0
-Desired outcome: one public readiness handoff before outreach, listing repair, or payment-path changes
+Latest probe window: developer_tool_hit=<n>, agent_crawler_hit=<n>, x402_probe=<n>, http_402_responses=<n>
+Buyer-action boundary: paid_calls=0, settle_successes=0, readiness_subscription_intent=0, alert_subscriptions=0, third_party_submission=0
+Desired outcome: one public probe-to-payment handoff before outreach, listing repair, or payment-path changes
 ```
 
 ## Stop Conditions

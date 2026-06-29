@@ -21,6 +21,8 @@ Fastest current fit: an endpoint has crawler or directory hits, public x402/MCP 
 
 If report counts, developer-tool hits, crawler fetches, directory rows, or x402 probes keep rising while `paid_calls`, listing submissions, and subscription intent stay at zero, treat that as a conversion problem: the endpoint is being inspected, but the buyer-safe next action is not obvious enough yet.
 
+If HTTP `402` responses appear while `paid_calls=0`, treat it as a sharper probe-to-payment problem: payment-aware clients reached the paid boundary and stopped. The audit should inspect whether the 402 challenge, free preflight, cheapest paid action, receipt shape, and stop conditions are clear enough for an autonomous buyer.
+
 Developer-tool attention is enough for the free fit check when it is public and concrete. If your latest window shows `developer_tool_hit`, `x402_probe`, MCP manifest fetches, or directory crawler activity but still has `paid_calls=0`, open the issue with those counters and ask for the one action that should come before outreach, ads, or a payment-link change.
 
 Benchmark/API visitor attention is also enough for the free fit check when the visited endpoint is public. If people or crawlers are hitting benchmark rows, comparison APIs, report APIs, or paid-endpoint metadata while `paid_calls=0`, submit the visited paths, durable report totals, latest-window events, and the current buyer-action boundary. The first audit question becomes: what public next step should a benchmark reader take before paying, listing, or trusting the endpoint?
@@ -69,7 +71,7 @@ Endpoint:
 x402 manifest:
 MCP manifest:
 Current signal: total_reports=3075, ready_reports=2910, latest_window_developer_tool_hit=4
-Conversion boundary: paid_calls=0, listing submissions=0, subscriptions=0, buyer replies=0
+Conversion boundary: x402_probe=3, http_402_responses=3, paid_calls=0, settle_successes=0, listing submissions=0, subscriptions=0, buyer replies=0
 Desired outcome: one trusted next action for an agent, directory, or endpoint owner
 ```
 
