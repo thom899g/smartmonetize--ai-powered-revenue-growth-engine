@@ -54,7 +54,7 @@ Use public or anonymized numbers:
 
 ## How To Start
 
-Open a GitHub issue using the `Revenue Triage Audit Request` template.
+Open a GitHub issue using the [Revenue Triage Audit Request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml) template.
 
 If you arrived by starring or bookmarking the repo, the next concrete signal is still an issue with one public URL and one real counter, listing, search, demo, or repo-attention datapoint. Use the MCP/x402 form for endpoints and the general triage form for other products.
 

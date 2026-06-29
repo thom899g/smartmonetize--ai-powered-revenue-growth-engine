@@ -6,9 +6,13 @@ SmartMonetize is a lightweight audit tool that turns a few product metrics into 
 
 ## Cloned This Repo?
 
-Start with [After Cloning SmartMonetize](AFTER_CLONING.md). It shows the fastest path from local triage to a public fit-check issue without sharing private data.
+Start with [After Cloning SmartMonetize](AFTER_CLONING.md). It shows the fastest path from local triage to a public fit-check request without sharing private data.
 
-Fastest public signal path: if you cloned this because your product has attention but no paid conversion, reply in [issue #1](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/1) with one public URL, one real signal, the conversion boundary, and whether a `$49`, `$199`, or `$299` pilot could fit.
+Fastest public signal path: if you cloned this because your product has attention but no paid conversion, open the matching request form with one public URL, one real signal, the conversion boundary, and whether a `$49`, `$199`, or `$299` pilot could fit:
+
+- [General revenue triage request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml) for web products, SaaS, demos, search traffic, or signup funnels.
+- [MCP/x402 endpoint request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml) for MCP servers, x402 endpoints, paid APIs, and agent-callable tools.
+- [Agent/MCP trust-boundary request](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=agent_mcp_trust_boundary_audit.yml) for agent frameworks, browser agents, memory systems, and automation products.
 
 ## Found This From `x402-service`, `mcp-server`, Or `agent-commerce`?
 
