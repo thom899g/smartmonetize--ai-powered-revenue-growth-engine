@@ -13,16 +13,16 @@ This public case study shows how SmartMonetize handles a product with real distr
 
 ## Live Evidence Snapshot
 
-Checked: `2026-06-29T14:26:03Z`.
+Checked: `2026-06-29T15:15:07Z`.
 
-- Verification reports: `total_reports=3248`, `ready=3077`, `close=61`, `needs_work=110`.
-- Discovery counters: `developer_tool_hit=11`, `agent_crawler_hit=3`, `x402_probe=0`, `human_visit=0`.
+- Verification reports: `total_reports=3252`, `ready=3081`, `close=61`, `needs_work=110`.
+- Discovery counters: `developer_tool_hit=40`, `agent_crawler_hit=3`, `x402_probe=11`, `human_visit=0`.
 - Conversion counters: `paid_call=0`, `readiness_subscription_intent=0`, `alert_subscriptions=0`, `third_party_submission=0`.
-- x402 counters: `402_responses=0`, `paid_calls=0`, `settle_successes=0`.
+- x402 counters: `402_responses=11`, `paid_calls=0`, `settle_successes=0`.
 - Ledger boundary: one settled `0.01` USDC proof-of-life row exists, but it is self-funded and not customer revenue.
-- Movement since the prior public snapshot: verification reports increased from `3240` to `3248`, ready reports increased from `3069` to `3077`, developer-tool hits increased from `3` to `11`, and agent-crawler hits increased from `1` to `3`. Conversion counters stayed at zero.
-- Directory state: the live agent-buyer guide, MCP manifest, and x402 manifest are reachable, but the public agent-tools row still reports `conformance: fail`.
-- Counter hygiene: counter resets or drops are treated as telemetry hygiene until they are tied to buyer action; report growth, probe visibility, and developer-tool hits are useful attention signals, not customer revenue.
+- Movement since the prior public snapshot: verification reports increased from `3248` to `3252`, ready reports increased from `3077` to `3081`, developer-tool hits increased from `11` to `40`, and x402 probes/HTTP 402 responses increased from `0` to `11`. Conversion counters stayed at zero.
+- Directory state: the live agent-buyer guide, MCP manifest, x402 manifest, and 402 payment challenge are reachable.
+- Counter hygiene: one `x402_probe` in this snapshot came from an internal verification curl, so the safest interpretation is not "buyer demand proved." The valid public signal is that developer/tool attention is present while buyer-action counters are still zero.
 
 ## Input Metrics
 
@@ -32,7 +32,7 @@ The local example file is [`examples/ontario_protocol_metrics.json`](examples/on
 {
   "product": "Ontario Protocol",
   "monthly_visitors": 120,
-  "qualified_clicks": 242,
+  "qualified_clicks": 54,
   "signups": 0,
   "paid_customers": 0,
   "average_price_usd": 49,
@@ -45,26 +45,26 @@ The local example file is [`examples/ontario_protocol_metrics.json`](examples/on
 
 These are intentionally conservative rough numbers. They are not private analytics exports.
 
-The `qualified_clicks` value is a proxy for public machine attention in the current run: `x402_probe + agent_crawler_hit + developer_tool_hit`. Human visits are tracked separately because they are attention, but not enough by themselves to prove buyer intent. Treat counter resets or decreases as telemetry hygiene issues, not customer revenue or lost revenue.
+The `qualified_clicks` value is a proxy for public machine attention in the current run: `x402_probe + agent_crawler_hit + developer_tool_hit`. Human visits are tracked separately because they are attention, but not enough by themselves to prove buyer intent. Treat counter resets or decreases as telemetry hygiene issues, not customer revenue or lost revenue. Verification calls can contaminate probe counters, so SmartMonetize keeps the zero-revenue boundary visible instead of pretending every probe is a buyer.
 
 ## Current Probe-To-Payment Gap
 
 The strongest current Ontario signal is not a star, a report, or a dashboard. It is this boundary:
 
 ```text
-developer_tool_hit=11
+developer_tool_hit=40
 agent_crawler_hit=3
-x402_probe=0
-402_responses=0
+x402_probe=11
+402_responses=11
 paid_calls=0
 settle_successes=0
 ```
 
-That means machine discovery is still happening, the buyer guide is now reachable, and the remaining public row still needs a conformance repair before it can be treated as a stronger buyer path. The SmartMonetize diagnosis is:
+That means machine discovery is still happening and payment-aware clients can reach the 402 boundary, but nobody has completed a customer paid call yet. The SmartMonetize diagnosis is:
 
 ```text
-Discovery works enough to trigger tool and crawler attention.
-The next revenue question is why public directory conformance still fails before payment or owner inquiry.
+Discovery works enough to trigger tool and probe attention.
+The next revenue question is why payment-aware clients stop at the 402 boundary instead of completing a paid call or requesting the free endpoint-owner mini-check.
 ```
 
 The immediate mini-audit focus should be the directory-to-buyer bridge:

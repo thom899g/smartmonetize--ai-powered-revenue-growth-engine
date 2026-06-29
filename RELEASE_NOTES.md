@@ -2,6 +2,9 @@
 
 ## Agent/MCP trust-boundary package
 
+- Refresh: `2026-06-29T15:15:07Z` public evidence now shows `total_reports=3252`, `ready=3081`, `developer_tool_hit=40`, `agent_crawler_hit=3`, `x402_probe=11`, `402_responses=11`, and `paid_calls=0`.
+- Tightens the Ontario case study around the current probe-to-payment boundary: payment-aware clients can reach HTTP 402, but no customer paid call has happened yet.
+- Keeps the self-funded 0.01 USDC proof separate from customer revenue.
 - Fast inbound path for cloners: [issue #1](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/1) now accepts public/non-sensitive fit-check requests from anyone with attention but no paid conversion.
 - Adds the Agent/MCP Trust Boundary Audit for agent frameworks, MCP servers, browser agents, memory systems, and agent-callable tools.
 - Adds a public issue form for free fit checks before any `$299` paid pilot discussion.
