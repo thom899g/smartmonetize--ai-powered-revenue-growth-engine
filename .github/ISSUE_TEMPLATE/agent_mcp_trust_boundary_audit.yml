@@ -1,0 +1,75 @@
+name: Agent/MCP Trust Boundary Audit Request
+description: Request the $299 public-data audit for an agent framework, MCP server, browser agent, or agent-callable tool.
+title: "[Agent/MCP Trust Audit]: "
+labels: ["revenue-audit", "agent-mcp", "pilot-interest"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when a public agent repo, MCP server, browser agent, memory system, or agent-callable tool has attention but needs stronger trust boundaries before buyers can adopt it. This is a free public fit check first. Do not include passwords, API keys, payment details, private customer data, confidential business data, private logs, or private admin URLs.
+  - type: input
+    id: project
+    attributes:
+      label: Project name
+      description: What public project should be reviewed?
+      placeholder: Example Agent Framework
+    validations:
+      required: true
+  - type: input
+    id: public_url
+    attributes:
+      label: Public repo, docs, endpoint, or landing page
+      description: Public URL only.
+      placeholder: https://github.com/example/agent-framework
+    validations:
+      required: true
+  - type: textarea
+    id: current_signal
+    attributes:
+      label: Current public market signal
+      description: What evidence shows attention already exists?
+      placeholder: "Example: 1,200 stars, active issues, MCP directory row, demo usage, docs traffic, x402 probes, or crawler fetches."
+    validations:
+      required: true
+  - type: textarea
+    id: capabilities
+    attributes:
+      label: Agent/tool capabilities
+      description: Which capabilities create trust or approval risk?
+      placeholder: "Example: filesystem tools, browser actions, memory persistence, payment endpoints, message sending, code execution, account changes, or API access."
+    validations:
+      required: true
+  - type: textarea
+    id: conversion_boundary
+    attributes:
+      label: Current conversion boundary
+      description: Where does attention stop before buyer action?
+      placeholder: "Example: stars and demos exist, but paid pilots=0, enterprise inquiries=0, production adoptions=unknown, paid_calls=0."
+    validations:
+      required: true
+  - type: textarea
+    id: desired_outcome
+    attributes:
+      label: Desired outcome
+      description: What should the audit help produce?
+      placeholder: "Buyer-safe README section, trust-boundary map, production-readiness checklist, accepted listing, paid pilot, or partner review."
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: What should the audit avoid?
+      placeholder: "Public data only; no exploit testing, no outreach, no private logs, no payment-provider changes."
+    validations:
+      required: false
+  - type: dropdown
+    id: pilot_interest
+    attributes:
+      label: Are you interested in the $299 paid pilot if the fit is clear?
+      options:
+        - "Yes, if the trust-boundary fit is clear"
+        - "Maybe, show me the free public fit check first"
+        - "No, open-source feedback only"
+    validations:
+      required: true

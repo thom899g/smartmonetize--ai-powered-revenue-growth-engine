@@ -3,6 +3,9 @@ contact_links:
   - name: MCP/x402 Endpoint Mini-Audit scope
     url: https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/blob/main/MCP_X402_ENDPOINT_AUDIT.md
     about: Check the $199 pilot scope before opening a public fit-check issue.
+  - name: Agent/MCP Trust Boundary Audit scope
+    url: https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/blob/main/AGENT_MCP_TRUST_BOUNDARY_AUDIT.md
+    about: Check the $299 pilot scope for agent frameworks, MCP servers, browser agents, and agent-callable tools.
   - name: Ontario Protocol public case study
     url: https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/blob/main/CASE_STUDY.md
     about: See the current machine-attention to buyer-action boundary this package is designed for.

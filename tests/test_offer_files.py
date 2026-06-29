@@ -17,6 +17,9 @@ def test_issue_template_captures_buyer_interest_without_private_data():
     mcp_template = Path(".github/ISSUE_TEMPLATE/mcp_x402_endpoint_audit.yml").read_text(
         encoding="utf-8"
     )
+    agent_template = Path(".github/ISSUE_TEMPLATE/agent_mcp_trust_boundary_audit.yml").read_text(
+        encoding="utf-8"
+    )
 
     assert "package_type" in template
     assert "MCP/x402 Endpoint Mini-Audit - $199 pilot" in template
@@ -33,6 +36,12 @@ def test_issue_template_captures_buyer_interest_without_private_data():
     assert "paid_calls=0" in mcp_template
     assert "reset-prone counters" in mcp_template
     assert "Do not include passwords" in mcp_template
+    assert "Agent/MCP Trust Boundary Audit Request" in agent_template
+    assert "$299" in agent_template
+    assert "public_url" in agent_template
+    assert "capabilities" in agent_template
+    assert "conversion_boundary" in agent_template
+    assert "Do not include passwords" in agent_template
 
 
 def test_sample_report_shows_deliverable_and_boundaries():
@@ -44,6 +53,9 @@ def test_sample_report_shows_deliverable_and_boundaries():
     quickstart = Path("QUICKSTART_TRIAGE.md").read_text(encoding="utf-8")
     case_study = Path("CASE_STUDY.md").read_text(encoding="utf-8")
     mcp_x402_audit = Path("MCP_X402_ENDPOINT_AUDIT.md").read_text(
+        encoding="utf-8"
+    )
+    trust_boundary_audit = Path("AGENT_MCP_TRUST_BOUNDARY_AUDIT.md").read_text(
         encoding="utf-8"
     )
     ontario_metrics = Path("examples/ontario_protocol_metrics.json").read_text(
@@ -77,7 +89,10 @@ def test_sample_report_shows_deliverable_and_boundaries():
     assert "Revenue Triage Audit Request" in case_study
     assert "Ontario Protocol" in ontario_metrics
     assert "MCP_X402_ENDPOINT_AUDIT.md" in readme
+    assert "AGENT_MCP_TRUST_BOUNDARY_AUDIT.md" in readme
+    assert "Agent/MCP Trust Boundary Audit request issue form" in readme
     assert "MCP_X402_ENDPOINT_AUDIT.md" in offer
+    assert "AGENT_MCP_TRUST_BOUNDARY_AUDIT.md" in offer
     assert "MCP_X402_ENDPOINT_AUDIT.md" in quickstart
     assert "FIRST_RESPONSE_MCP_X402_AUDIT_SKELETON.md" in readme
     assert "FIRST_RESPONSE_MCP_X402_AUDIT_SKELETON.md" in mcp_x402_audit
@@ -88,7 +103,14 @@ def test_sample_report_shows_deliverable_and_boundaries():
     assert "Only discuss the `$199` MCP/x402 Endpoint Mini-Audit" in first_response
     assert "No guarantee of listing acceptance" in first_response
     assert "MCP/x402 Endpoint Mini-Audit" in release_notes
+    assert "Agent/MCP Trust Boundary Audit" in release_notes
+    assert "$299" in trust_boundary_audit
+    assert "trust-boundary map" in trust_boundary_audit
+    assert "No guarantee" in trust_boundary_audit
+    assert "passwords" in trust_boundary_audit
+    assert "agent_mcp_trust_boundary_audit.yml" in readme
     assert "McpX402Audit" in pyproject
+    assert "AgentMcpTrustAudit" in pyproject
     assert "McpX402AuditRequest" in pyproject
     assert "$199" in mcp_x402_audit
     assert "No guarantee" in mcp_x402_audit or "no guarantee" in mcp_x402_audit

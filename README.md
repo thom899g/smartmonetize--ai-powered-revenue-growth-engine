@@ -10,6 +10,7 @@ If you run a paid API, MCP server, x402 endpoint, or agent-callable tool that ha
 
 - **Starred this repo and want a fit check?** Open the [MCP/x402 audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml) and paste one public endpoint plus one real signal. A star alone is not treated as buyer interest; the issue turns anonymous attention into a concrete public fit check.
 - [MCP/x402 Endpoint Mini-Audit package](MCP_X402_ENDPOINT_AUDIT.md) - `$199` pilot for one public endpoint.
+- [Agent/MCP Trust Boundary Audit](AGENT_MCP_TRUST_BOUNDARY_AUDIT.md) - `$299` pilot for agent frameworks, MCP servers, browser agents, memory systems, and agent-callable tools that need buyer-safe trust evidence before production adoption.
 - [Example MCP/x402 audit request](EXAMPLE_MCP_X402_AUDIT_REQUEST.md) - safe public issue shape for endpoint owners with counters but no buyer action.
 - [First-response MCP/x402 audit skeleton](FIRST_RESPONSE_MCP_X402_AUDIT_SKELETON.md) - public-data reply shape after a real endpoint-owner request.
 - [Directory support note draft](DIRECTORY_SUPPORT_NOTE_DRAFT.md) - owner-approved support-note shape for mixed `pass`/`fail` directory rows.
@@ -138,6 +139,7 @@ Before opening an issue, inspect the sample deliverable:
 - [Sample SmartMonetize revenue triage report](SAMPLE_REPORT.md)
 - [Public Ontario Protocol case study](CASE_STUDY.md)
 - [MCP/x402 Endpoint Mini-Audit package](MCP_X402_ENDPOINT_AUDIT.md)
+- [Agent/MCP Trust Boundary Audit](AGENT_MCP_TRUST_BOUNDARY_AUDIT.md)
 - [Example MCP/x402 audit request](EXAMPLE_MCP_X402_AUDIT_REQUEST.md)
 - [First-response MCP/x402 audit skeleton](FIRST_RESPONSE_MCP_X402_AUDIT_SKELETON.md)
 - [Directory support note draft](DIRECTORY_SUPPORT_NOTE_DRAFT.md)
@@ -145,6 +147,7 @@ Before opening an issue, inspect the sample deliverable:
 - [5-minute self-service triage](QUICKSTART_TRIAGE.md)
 - [Pilot offer and scope](OFFER.md)
 - [MCP/x402 audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml)
+- [Agent/MCP Trust Boundary Audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=agent_mcp_trust_boundary_audit.yml)
 - [General revenue triage issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml)
 
 Fast fit check:

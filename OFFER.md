@@ -68,13 +68,21 @@ For MCP, x402, paid API, and agent-callable endpoint owners, use the sharper pac
 
 It focuses on public discovery, payment metadata, directory readiness, and buyer-trust blockers for one endpoint. Read [`MCP_X402_ENDPOINT_AUDIT.md`](MCP_X402_ENDPOINT_AUDIT.md).
 
+For agent frameworks, MCP servers, browser agents, memory systems, and agent-callable tools with public attention but unclear production trust boundaries:
+
+**Agent/MCP Trust Boundary Audit - $299 pilot**
+
+It maps external actions, secrets, approvals, proof receipts, and buyer-safe documentation gaps. Read [`AGENT_MCP_TRUST_BOUNDARY_AUDIT.md`](AGENT_MCP_TRUST_BOUNDARY_AUDIT.md).
+
 ## Inspect Before Requesting
 
 - [5-minute self-service triage](QUICKSTART_TRIAGE.md)
 - [Sample report](SAMPLE_REPORT.md)
 - [Public Ontario Protocol case study](CASE_STUDY.md)
 - [MCP/x402 Endpoint Mini-Audit](MCP_X402_ENDPOINT_AUDIT.md)
+- [Agent/MCP Trust Boundary Audit](AGENT_MCP_TRUST_BOUNDARY_AUDIT.md)
 - [MCP/x402 audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml)
+- [Agent/MCP Trust Boundary Audit request issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=agent_mcp_trust_boundary_audit.yml)
 - [General revenue triage issue form](https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml)
 
-The fastest valid signal is not a star. It is an issue or message from someone with a real product, public/anonymized metrics, and interest in the `$49` triage pilot or `$199` MCP/x402 endpoint mini-audit.
+The fastest valid signal is not a star. It is an issue or message from someone with a real product, public/anonymized metrics, and interest in the `$49` triage pilot, `$199` MCP/x402 endpoint mini-audit, or `$299` Agent/MCP Trust Boundary Audit.

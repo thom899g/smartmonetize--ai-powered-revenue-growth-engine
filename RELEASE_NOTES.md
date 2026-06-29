@@ -1,3 +1,13 @@
+# SmartMonetize v0.1.4
+
+## Agent/MCP trust-boundary package
+
+- Adds the Agent/MCP Trust Boundary Audit for agent frameworks, MCP servers, browser agents, memory systems, and agent-callable tools.
+- Adds a public issue form for free fit checks before any `$299` paid pilot discussion.
+- Links the package from the README, offer, and issue-template contact links.
+
+Boundary: this is an owned public offer surface. It is not outreach, account creation, payment collection, or customer revenue.
+
 # SmartMonetize v0.1.3
 
 ## Probe-to-payment diagnostic

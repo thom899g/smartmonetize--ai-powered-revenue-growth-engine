@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "smartmonetize"
-version = "0.1.3"
+version = "0.1.4"
 description = "Deterministic revenue triage CLI for small products with attention but no paid conversion."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -35,6 +35,8 @@ SampleReport = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-gr
 AuditRequest = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=revenue_triage_audit.yml"
 McpX402AuditRequest = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=mcp_x402_endpoint_audit.yml"
 McpX402Audit = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/blob/main/MCP_X402_ENDPOINT_AUDIT.md"
+AgentMcpTrustAuditRequest = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/issues/new?template=agent_mcp_trust_boundary_audit.yml"
+AgentMcpTrustAudit = "https://github.com/thom899g/smartmonetize--ai-powered-revenue-growth-engine/blob/main/AGENT_MCP_TRUST_BOUNDARY_AUDIT.md"
 
 [project.scripts]
 smartmonetize = "smartmonetize.cli:main"
