@@ -2,7 +2,8 @@
 
 ## Probe-to-payment diagnostic
 
-- Refreshes the Ontario Protocol case study with live probe evidence: `x402_probe=3`, `402_responses=3`, `paid_calls=0`.
+- Refresh: `2026-06-29T14:26:03Z` public evidence now shows `total_reports=3248`, `ready=3077`, `developer_tool_hit=11`, `agent_crawler_hit=3`, `paid_calls=0`, and a reachable agent-buyer guide while the public agent-tools row still reports `conformance: fail`.
+- Refreshes the Ontario Protocol case study with live discovery evidence and the current directory-to-buyer conformance boundary.
 - Adds an explicit probe-to-payment gap section.
 - Tightens the MCP/x402 mini-audit package around the moment where payment-aware clients reach HTTP 402 but do not complete payment.
 - Extends the probe handoff draft with `http_402_responses`, `settle_successes`, and cheapest-paid-probe guidance.
