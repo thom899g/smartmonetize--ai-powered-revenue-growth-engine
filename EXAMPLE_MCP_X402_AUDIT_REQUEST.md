@@ -20,9 +20,9 @@ MCP manifest URL:
 https://example.com/.well-known/mcp.json
 
 Current public market signal:
-durable totals: total_reports=3168, ready_reports=3000
-latest window: developer_tool_hit=149, x402_probe=32, human_visit=4, agent_crawler_hit=17, paid_calls=0
-prior window if known: total_reports=3159, ready_reports=2991, developer_tool_hit=5, x402_probe=8, agent_crawler_hit=1, human_visit=3
+durable totals: total_reports=3222, ready_reports=3051
+latest window: developer_tool_hit=7, x402_probe=33, human_visit=58, agent_crawler_hit=19, paid_calls=0
+prior window if known: total_reports=3216, ready_reports=3045, developer_tool_hit=4, x402_probe=16, agent_crawler_hit=6, human_visit=35
 repo_stars=1
 
 Where did the attention come from?
@@ -32,7 +32,7 @@ Directory page if applicable:
 https://agent-tools.cloud/services/ontario-protocol-ontarioprotocol-com-x402
 
 Directory status:
-conformance: fail
+accepted awesome-x402 listing; live agent-buyer guide URL currently returns 404 while MCP and x402 manifests are reachable
 
 Current conversion boundary:
 paid_calls=0
@@ -42,7 +42,7 @@ third_party_submission=0
 buyer replies=0
 
 Desired outcome:
-One buyer-safe next action that can turn machine discovery into an endpoint-owner inquiry, accepted listing, paid call, or readiness proof.
+One buyer-safe next action that can turn machine discovery into an endpoint-owner inquiry, live agent-buyer guide, paid call, or readiness proof.
 
 Constraints:
 Public data only. No outreach, ads, payment-provider changes, private analytics, or admin access.
